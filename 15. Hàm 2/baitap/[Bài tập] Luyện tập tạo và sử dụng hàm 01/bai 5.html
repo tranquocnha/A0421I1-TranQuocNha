@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let flag = true;
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function findStar(nameOfStar) {
+        for (let i = 0; i < star.length; i++) {
+            if (nameOfStar === star[i]) {
+                flag = false;
+                return alert("Chòm sao tương ứng của nó là " + constellation[i]);
+            }
+        } if (flag) {
+            alert("Rất tiếc! Không tìm thấy chòm sao tương ứng");
+        }
+    }
+    findStar(prompt('Hãy nhập 1 ngôi sao'));
+</script>
+</body>
+</html>

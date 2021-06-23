@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+    In ra giá trị trung bình của các phần tử trong mảng.</h2>
+<script>
+        var max=0;
+        var array = [30,4,5,6,1,2,3,4,20,10];
+        var sum=0;
+        for(var i=0;i<array.length;i++){
+            sum +=array[i];
+            if(max<=array[i]){
+            max=array[i];
+            }
+        }
+        let aveger = sum/array.length;
+        document.write(aveger);
+        console.log(array.indexOf(max));
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dientichhinhtron</title>
+</head>
+<body>
+    <h3>Chu vi - dien tich hinh tron</h3>
+    <p><input type="button" onclick="calculate()"  value="Chuvi"></p>
+    <p><input type="button" onclick="caldientich()" value="Dientich"></p>
+<script type="text/javascript">
+    function calculate() {
+        var radius=prompt("nhap chu vi");
+        var pi=3.14159265359;
+        var circ=2*pi*radius;
+        var d=alert(" nhap r "+radius+" dien tich chu vi"+circ+".")
+    }
+    function caldientich() {
+        var radius1=prompt("nhap chu vi");
+        var pi=3.14159265359;
+        var circ1=radius1*radius1*pi;
+        var d1=alert(" nhap r  "+radius1+" dien tich hinh tron"+circ1+".")
+    }
+</script>
+</body>
+</html>

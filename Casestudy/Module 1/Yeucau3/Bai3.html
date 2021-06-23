@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function maxFraction(numerators,denominators) {
+        let chiSo=0;
+        let max=0;
+        let soPhanTu=0;
+        if(numerators.length<denominators.length){
+            soPhanTu = denominators.length;
+        }else{
+            soPhanTu = numerators.length;
+        }
+        for (let g = 0; g < soPhanTu; g++) {
+            if (numerators[g] / denominators[g] > max) {
+                max = (numerators[g] / denominators[g]);
+                chiSo = g;
+            }
+        }
+        return chiSo;
+    }
+    let numerators=[5,2,5];
+    let denominators=[6,3,4];
+    console.log(maxFraction(numerators,denominators));
+</script>
+</body>
+</html>

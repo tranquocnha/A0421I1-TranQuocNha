@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="1"></p>
+<p id="2"></p>
+<p id="3"></p>
+<p id="4"></p>
+<p id="5"></p>
+<script>
+    var styles = ["Jazz","Bules"];
+    document.getElementById("1").innerHTML = styles;
+    var array0=[];
+     styles.push("Rock-n-Roll");
+    document.getElementById("2").innerHTML = styles;
+    var locations = parseInt((styles.length)/2);
+    styles.splice(locations,0,"Classics");
+    document.getElementById("3").innerHTML = styles;
+    array0 = styles[0];
+    console.log(array0);
+    document.getElementById("4").innerHTML = array0;
+    styles.unshift("Rap","Reggae");
+    document.getElementById("5").innerHTML = styles;
+
+</script>
+</body>
+</html>

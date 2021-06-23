@@ -1,0 +1,13 @@
+.main{
+    background-color: yellow
+
+}
+table{
+    border: 1px solid #1c1c1c;
+    text-align: center;
+    width: 70%;
+}
+tr,th{
+    border: 1px solid #1c1c1c;
+    text-align: left;
+}

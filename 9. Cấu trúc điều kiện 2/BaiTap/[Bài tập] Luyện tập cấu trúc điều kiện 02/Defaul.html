@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+<div>
+    <p><h2>Bài 1: Chuyển từ độ C sang độ F.</h2></p>
+    <label>Đổi C sang độ F  </label><input type="text" id="C" size="20" name="" value="">
+    <input type="button" onclick="funciC()" value="Đổi">
+    <p id="total"></p>
+</div>
+<div>
+    <p><h2>Bài 2: Chuyển từ mét sang feet:</h2></p>
+    <label>Chuyển từ mét sang feet: </label><input type="text" id="met" size="20" name="" value="">
+    <input type="button" onclick="funcimet()" value="Submit">
+    <p id="total1"></p>
+</div>
+<div>
+    <p><h2>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h2></p>
+    <label>Cạnh A: </label><input type="text" id="a" size="20">
+    <input type="button" onclick="funcisquare()" value="Submit">
+    <p id="total2"></p>
+</div>
+<div>
+    <p><h2>Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</h2></p>
+    <label>Cạnh a</label><input type="text" id="canha" size="20">
+    <label>Cạnh b</label><input type="text" id="canhb" size="20">
+    <input type="button" onclick="funcirectangle()" value="Submit">
+    <p id="total3"></p>
+</div>
+<div>
+    <p><h2>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h2></p>
+    <label>Cạnh a</label><input type="text" id="canh_a" size="20">
+    <label>Cạnh b</label><input type="text" id="canh_b" size="20">
+    <label>Cạnh c</label><input type="text" id="canh_c" size="20">
+    <input type="button" onclick="funcitriangle()" value="Submit">
+    <p id="total4"></p>
+</div>
+<div>
+    <p><h2>Bài 6: Giải phương trình bậc 1.</h2></p>
+    <label>Nhập các tham số của phương trình ax+b=0</label><br/>
+    <label>a= </label><input type="text" id="numbera" size="20"><br/>
+    <label>b= </label><input type="text" id="numberb" size="20"><br/>
+    <input type="button" onclick="funcisolving()" style="margin-left: 50px" value="Submit">
+    <p id="total5"></p>
+</div>
+<div>
+    <p><h2>Bài 7: Giải phương trình bậc 2.</h2></p>
+    <label>Nhập các tham số của phương trình ax<sup>2</sup>+bx+c=0</label><br>
+    <label>a= </label><input type="text" id="number_a" size="20"><br/>
+    <label>b= </label><input type="text" id="number_b" size="20"><br/>
+    <label>c= </label><input type="text" id="number_c" size="20"><br/>
+    <input type="button" onclick="funcisolving2()" style="margin-left: 50px" value="Submit">
+    <p id="total6"></p>
+</div>
+<div>
+    <p><h2>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h2></p>
+    <label>Tuổi </label><input type="text" id="age" size="20"><br/>
+    <input type="button" onclick="Funciisage()" style="margin-left: 50px" value="Submit">
+    <p id="total7"></p>
+</div>
+<div>
+    <p><h2>Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác</h2></p>
+    <label>Cạnh a </label><input type="text" id="number-a" size="20"><br/>
+    <label>Cạnh b </label><input type="text" id="number-b" size="20"><br/>
+    <label>Cạnh c </label><input type="text" id="number-c" size="20"><br/>
+    <input type="button" onclick="Funcitringle()" style="margin-left: 50px" value="Submit">
+    <p id="total8"></p>
+</div>
+<div>
+    <p><h2>Bài 10: Viết chương trình tính giá điện.</h2></p>
+    <label>Nhap vao KW: </label><input type="text" id="kw" size="20"><br>
+    <input type="button" onclick="funcimoneykw()" style="margin-left: 50px" value="Submit">
+    <p id="total9"></p>
+</div>
+<div>
+    <p><h2>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h2></p>
+    <label>Nhap Luong ca nhan</label><input type="text" id="luong" size="20"><br/>
+    <input type="button" onclick="funcimoneyluong()" style="margin-left: 50px" value="Submit">
+    <p id="total10"></p>
+</div>
+<div>
+    <p><h2>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h2></p>
+    <label>Nhap tien von</label><input type="text" id="von" size="20"><br/>
+    <label>Nhap lai suat</label><input type="text" id="lsuat" size="20">Vui long khong ghi %.  Vidu 5% = 0.05<br/>
+    <label>Nhap so nam</label><input type="text" id="year" size="20"><br/>
+    <input type="button" onclick="funcinganhang()" style="margin-left: 50px" value="Submit">
+    <p id="total11"></p>
+</div>
+<script>
+    //bai1
+    function funciC() {
+        let C = parseInt(document.getElementById('C').value);
+        let total = document.getElementById('total');
+        let area = C*9/5 +32;
+        if(!isNaN(C)==false)
+        {
+            total.innerText = "vui lòng nhập vào độ C"
+        }else{
+        total.innerHTML = "<sup>o</sup>F= "+ area;
+        }
+    } 
+    //bai2
+    function funcimet() {
+        let met = parseInt(document.getElementById('met').value);
+        let total1 = document.getElementById('total1');
+        let ft = met * 3.2808
+        if(!isNaN(met)==false){
+            total1.innerHTML = "vui lòng nhập vào met"
+        }
+        else{
+            total1.innerHTML = "ft= "+ft.toLocaleString();
+        }
+    }
+    //bai3
+    function funcisquare() {
+        let a = parseInt(document.getElementById('a').value);
+        let total = document.getElementById('total2');
+
+        if(!isNaN(a)==false){
+            total.innerHTML = "vui lòng nhập vào cạnh a"
+        }
+        else{
+            let S = a*a;
+            total.innerText = "Diện Tich Hình Vuông= "+S;
+        }
+    }
+    //bai4
+    function funcirectangle() {
+        let a = parseInt(document.getElementById('canha').value);
+        let b = parseInt(document.getElementById('canhb').value);
+        let total = document.getElementById('total3');
+        if(isNaN(a)==true || isNaN(b)==true){
+            total.innerHTML = "vui lòng nhập canh a và b";
+        }
+        else{
+            let S = a*b;
+            total.innerHTML = "Diện tích hình chữ nhật= "+S;
+        }
+    }
+    //bai5
+    function funcitriangle() {
+        let a = parseInt(document.getElementById('canh_a').value);
+        let b = parseInt(document.getElementById('canh_b').value);
+        let c = parseInt(document.getElementById('canh_c').value);
+        let total = document.getElementById('total4');
+        if(isNaN(a) || isNaN(b) || isNaN(c)){
+            total.innerHTML = " vui lòng nhập cạnh a và b và c";
+        }
+        else if(a<b+c && b<a+c && c<a+b ){
+            let S = (a*b)/2;
+            total.innerHTML = "Diện tích tam giác vuông= "+S;
+        }
+        else{ total.innerHTML = "Không phải tâm giác vuông";}
+    }
+    //bai6
+    function funcisolving() {
+        let a = parseInt(document.getElementById('numbera').value);
+        let b = parseInt(document.getElementById('numberb').value);
+        let total = document.getElementById('total5');
+            let s = -b/a;
+            total.innerHTML = "Kết quả: Phương trình có nghiệm duy nhất x= "+s;
+    }
+    //bai7
+    function funcisolving2() {
+        let a = parseInt(document.getElementById('number_a').value);
+        let b = parseInt(document.getElementById('number_b').value);
+        let c = parseInt(document.getElementById('number_c').value);
+
+        let total = document.getElementById('total6');
+        if(isNaN(a)||isNaN(b)||isNaN(c)){
+            total.innerHTML = "Dữ liệu không hợp lệ"
+        }else if( a==0){
+            if( b==0){
+                if( c==0){
+                    total.innerHTML = "Phương trình có vô số nghiệm";
+                }else{
+                    total.innerHTML = "Phương trình vô nghiệm";
+                }
+            }else{
+                let x = -c/b;
+                total.innerHTML = "Phương trình có nghiệm duy nhất la: "+x;
+            }
+        }else{
+            let denta = (b*b)-(4*a*c);
+            if(denta<0){
+                total.innerHTML = "Phương trình vô nghiệm";
+            }else if(denta==0){
+                let x = -b / (2*a);
+                total.innerHTML = "Phương trình có 2 nghiệm kép "+x;
+            }else {
+                let x1 = (-b - Math.sqrt(denta))/(2*a);
+                let x2 = (-b + Math.sqrt(denta))/(2*a);
+                total.innerHTML = `Phương trình có 2 nghiệm phân biệt : ${x1} ;  ${x2}`
+            }
+        }
+    }
+    //bai8
+    function Funciisage() {
+        let age = parseInt(document.getElementById('age').value);
+        let total = document.getElementById('total7');
+        if(isNaN(age)){
+            total.innerHTML =  "Vui lòng nhập thông tin";
+        }else if(age>0 && age<120){
+            total.innerHTML = "Quá mức tuổi tự nhiên"
+        }else{
+            total.innerHTML = "Đây là tuổi"
+        }
+    }
+    //bai9
+    function Funcitringle() {
+        let a = parseInt(document.getElementById('number-a').value);
+        let b = parseInt(document.getElementById('number-b').value);
+        let c = parseInt(document.getElementById('number-c').value);
+        let total = document.getElementById('total8');
+        if (isNaN(a)||isNaN(b)||isNaN(c)){
+            total.innerHTML = " Vui lòng nhập cạnh a, b ,c ";
+        }else if ((a>0 && b>0 && c>0) && ((a + b > c) || (a + c > b) || (b + c > a))){
+            total.innerHTML = "Đây là một hình tam giác";
+        }else{
+            total.innerHTML = "Đây không phải là hình tam giác";
+        }
+    }
+    //bai10
+    function funcimoneykw() {
+        let kw = parseInt(document.getElementById('kw').value);
+        let total = document.getElementById('total9');
+        if(isNaN(kw)){
+            total.innerHTML = "Vui long nhap kw ";
+        }else if(kw<=50){
+            let tong = kw*480;
+            total.innerHTML = "Gia tien la: "+tong;
+        }else if(kw>=50 && kw<=100){
+            let tong = kw*700;
+            total.innerHTML = "Gia tien la: "+tong;
+        }else{
+            let tong = kw*900;
+            total.innerHTML = "Gia tien la: "+tong;
+        }
+    }
+    //bai11
+    function funcimoneyluong() {
+        let luong = parseInt(document.getElementById('luong').value);
+        let total = document.getElementById('total10');
+        if(isNaN(luong)){
+            total.innerHTML = "Vui long nhap tien luong: ";
+        }else if(luong>10000000){
+            luong = luong - (luong*20/100);
+            total.innerHTML = "Luong ca nhan sau thue la: "+luong;
+        }else
+        {
+            total.innerHTML = "Luong ca nhan sau thue la: "+luong;
+        }
+    }
+    //bai12
+    function funcinganhang() {
+        let von = parseFloat(document.getElementById('von').value);
+        let lsuat = parseFloat(document.getElementById('lsuat').value);
+        let year = parseInt(document.getElementById('year').value);
+        let total = document.getElementById('total11');
+        for(var i=1;i<year;i++){
+            var sum = (von * Math.pow((1+lsuat),year).toString());
+            von = sum;
+            total.innerHTML = "Tong tien kiem duoc: "+ von;
+        }
+    }
+</script>
+</body>
+</html>

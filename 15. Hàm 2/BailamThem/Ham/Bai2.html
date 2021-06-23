@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkCharaters() {
+        var char = prompt("Nhap ki tự");
+        if(char >='0'&& char<='9'){
+            return alert(char+" Đây không phải là số kí tự");
+        }
+    }
+    //checkCharaters();
+    //alert(checkSNT(checkCharaters()));
+    function checkSNT(n) {
+        if(n<2){
+            return false;
+        }
+        for (let i=0;i<Math.sqrt(n);i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    alert(checkCompleteNumber(6));
+    function checkCompleteNumber(n) {
+        let sum =0;
+        for(let i=1;i<=n/2;i++){
+            if(n%i==0){
+                sum+=i;
+            }
+        }
+        if(sum==n)
+        {
+            return true;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

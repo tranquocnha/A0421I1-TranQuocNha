@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 1:</h2>
+<script>
+    myColor = ["Red", "Green", "White", "Black"];
+    document.write(myColor.toString()+"<br/>");
+    document.write(myColor.join(" ")+"<br/>");
+    document.write(myColor.join("+")+"<br/>");
+</script>
+<h2>Bài 2:</h2>
+<script>
+    let num = window.prompt();
+    let str = num.toString();
+    let result = [str[0]];
+    for (var x = 1; x < str.length; x++) {
+        if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+            result.push('-', str[x]);
+        } else {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(""));
+</script>
+<h2>Bài 3:</h2>
+<script>
+    var strr = 'The Quick Brown Fox';
+    const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    const resultt = [];
+
+    for(let x=0; x<strr.length; x++)
+    {
+        if(UPPER.includes(strr[x]))
+        {
+            resultt.push(strr[x].toLowerCase());
+        }
+        else if(LOWER.includes(strr[x]))
+        {
+            resultt.push(strr[x].toUpperCase());
+        }
+        else
+        {
+            resultt.push(strr[x]);
+        }
+    }
+    document.write(resultt.join(''));
+
+</script>
+</body>
+</html>

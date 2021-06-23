@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng good-fast-cheap</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="g" onclick=switchGood() >
+        <span class="slider round good"></span>
+    </label>
+    <span>
+            <p><b>Good</b></p>
+        </span>
+    <br />
+    <label class="switch">
+        <input type="checkbox" id="c" onclick=switchCheap()>
+        <span class="slider round cheap"></span>
+    </label>
+    <span>
+            <p><b>Cheap</b></p>
+        </span>
+    <br />
+    <label class="switch">
+        <input type="checkbox" id="f" onclick=switchFast()>
+        <span class="slider round fast"></span>
+    </label>
+    <span>
+        <p><b>Fast</b></p>
+    </span>
+    <script>
+
+        function switchGood() {
+            var isGood = document.getElementById("g").checked;
+            var isCheap = document.getElementById("c").checked;
+            var isFast = document.getElementById("f").checked;
+            console.log(isGood,isCheap,isFast);
+            if (isCheap && isFast) {
+                if (Math.random() < 0.5) {
+                    document.getElementById("c").checked = false;
+                } else {
+                    document.getElementById("f").checked = false;
+                }
+            }
+        }
+        function switchCheap() {
+            var isGood = document.getElementById("g").checked;
+            var isCheap = document.getElementById("c").checked;
+            var isFast = document.getElementById("f").checked;
+            console.log(isGood,isCheap,isFast);
+            if (isGood && isFast) {
+                if (Math.random() < 0.5) {
+                    document.getElementById("g").checked = false
+                } else {
+                    document.getElementById("f").checked = false
+                }
+            }
+        }
+        function switchFast() {
+            var isGood = document.getElementById("g").checked;
+            var isCheap = document.getElementById("c").checked;
+            var isFast = document.getElementById("f").checked;
+            console.log(isGood,isCheap,isFast);
+            if (isGood && isCheap) {
+                if (Math.random() < 0.5) {
+                    document.getElementById("c").checked = false
+                } else {
+                    document.getElementById("f").checked = false
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

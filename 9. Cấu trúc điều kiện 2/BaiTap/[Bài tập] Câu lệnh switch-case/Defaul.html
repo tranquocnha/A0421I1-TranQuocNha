@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" value="" id="txtmonth"><input type="button" onclick="submit();" value="Tính số ngày">
+    <br/>
+    <label id="total"></label>
+    <script>
+        function submit() {
+            var inputmonth = document.getElementById('txtmonth').value;
+            var month = parseInt(inputmonth);
+            var totalElement = document.getElementById('total');
+            var input = totalElement.value;
+
+            switch (month){
+                case 1 : {
+                       totalElement.innerHTML = "Tháng 1 có 31 ngày";
+                    break;
+                }
+                case 2 : {
+                      totalElement.innerHTML = "Tháng 1 có 28 - 29 ngay";
+                    break;
+                }
+                case 3 : {
+                        totalElement.innerHTML = "Tháng 1 có 31 ngày";
+                    break;
+                }
+                case 4 : {
+                      totalElement.innerHTML = "Tháng 1 có 30 ngày";
+                    break;
+                }
+                case 5 : {
+                       totalElement.innerHTML = "Tháng 1 có 31 ngày";
+                    break;
+                }
+                case 6 : {
+                     totalElement.innerHTML = "Tháng 1 có 30 ngày"  ;
+                    break;
+                }
+                case 7 : {
+                     totalElement.innerHTML = "Tháng 1 có 31 ngày";
+                    break;
+                }
+                case 8 : {
+                    totalElement.innerHTML = "Tháng 1 có 31 ngày";
+                    break;
+                }
+                case 9 : {
+                    totalElement.innerHTML = "Tháng 1 có 30 ngày";
+                    break;
+                }
+                case 10 : {
+                    totalElement.innerHTML = "Tháng 1 có 31 ngày";
+                    break;
+                }
+                case 11 : {
+                    totalElement.innerHTML = "Tháng 1 có 30 ngày";
+                    break;
+                }
+                case 12 : {
+                    totalElement.innerHTML = "Tháng 1 có 31 ngày";
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

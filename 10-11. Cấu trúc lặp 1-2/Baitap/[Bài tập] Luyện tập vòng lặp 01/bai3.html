@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fibonacci(n) {
+        var f0=0;
+        var f1=1;
+        var fn=1;
+        if(n<0){
+            return false;
+        }else if( n==0 || n==1){
+            return n;
+        }else{
+            for(var i=2;i<n;i++){
+                f0=f1;
+                f1=fn;
+                fn=f0+f1;
+            }
+        }
+    return fn;
+    }
+    document.write("20 số trong dãy fibonacci đầu tiên: ");
+    for(var j=0;j<20;j++){
+        document.write(fibonacci(j)+"&nbsp");
+    }
+</script>
+</body>
+</html>

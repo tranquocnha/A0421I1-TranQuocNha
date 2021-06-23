@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        var y1=5,y2=35,t1=-1,t2=1;
+        var y3=12,y4=28;
+        ////
+        for(let i=1;i<=y1;i++)document.write('&emsp;');document.write("*");
+        for(let i=y1+1;i<=y3-3;i++)document.write("**");
+        for(let i=y3+2;i<=y4+2;i++)document.write('&emsp;');document.write("*");
+        for(let i=y4;i<=y2-3;i++)document.write("**");document.write("<br/> ");
+        ////
+        while(1){
+            for(let i=1;i<=y1-1;i++)document.write('&emsp;');document.write("*");
+            if(y3>y4){
+                for(let i=y1+1;i<=y2-1;i++)document.write('&emsp;');document.write("*");
+            }else{
+            if(y1<y3){
+                for(let i=y1+1;i<=y3-1;i++)document.write('&emsp;');document.write("*");
+            }
+            if(y3<y4){
+                for(let i=y3+1;i<=y4-1;i++)document.write('&emsp;');document.write("*");
+            }
+            if(y4<y2){
+                for(let i=y4+1;i<=y2-1;i++)document.write('&emsp;');document.write("*");
+            }
+            y3+=1;y4-=1;
+            }
+            document.write("<br/> ");
+            y1+=t1;y2+=t2;
+            if(y1==0){
+                t1=1;t2=-1;
+                y1+=t1;y2+=t2;
+            }
+            if(y1==y2) {
+                for(let i=1;i<=y1-1;i++)document.write('&emsp;');document.write("*");
+                break;
+            }
+        }
+</script>
+</body>
+</html>

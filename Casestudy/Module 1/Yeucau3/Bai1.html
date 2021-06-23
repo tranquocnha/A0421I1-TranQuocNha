@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function prefix_sums(arrNumberA) {
+        var arrNumberB = [];
+        for (let i = 0; i < arrNumberA.length; i++) {
+            arrNumberB[i] = 0;
+            for (let j = 0; j < i + 1; j++) {
+                arrNumberB[i] += arrNumberA[j];
+            }
+        }
+        return arrNumberB;
+    }
+    console.log(prefix_sums([1, 2, 3]));
+</script>
+</body>
+</html>

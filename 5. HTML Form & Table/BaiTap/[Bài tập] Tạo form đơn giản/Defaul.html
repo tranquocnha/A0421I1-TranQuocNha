@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+</head>
+<body>
+    <div class="container">
+    <form method="get" action="Defaul.html" class="center">
+        <h1 class="main-1">SỞ THÍCH CỦA BẠN</h1>
+        <div class="main-2">
+            <label id="txt_hvt">Họ và tên</label>
+            <input type="text" name="name" size="auto"/>
+        </div>
+        <div  class="main-2">
+            <label id="txt_email">Email</label>
+            <input type="text" name="email" size="auto">
+        </div>
+        <div class="main-radio">
+            <div class="main-container">
+                <label id="txt_radio"  class="title-hobby">Sở thích</label>&ensp;
+                <div class="input-container">
+                    <input type="checkbox" name="cc"> <label ><span></span>Thể thao</label>
+                    <input type="checkbox" name="cc"> <label ><span></span>Âm Nhạc</label>
+                    <input type="checkbox" name="cc"> <label ><span></span>Đọc Sách</label><br/>
+                    <input type="checkbox" name="cc"> <label ><span></span>Lướt Web</label>
+                    <input type="checkbox" name="cc"> <label ><span></span>Chơi game</label>
+                    <input type="checkbox" name="cc"> <label ><span></span>Điện ảnh</label>
+                    <input type="checkbox" name="cc"> <label><span></span>Du lịch</label>
+                </div>
+            </div>
+        </div>
+        <div class="main-button">
+        <p><input type="button" name="btSubmit" value="Gửi thông tin" >
+            <input type="button" name="btReset" value="Nhập lại" >
+        </p>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

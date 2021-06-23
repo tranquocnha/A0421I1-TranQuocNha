@@ -1,0 +1,47 @@
+.container{
+    width: 800px;
+}
+.main{
+    border: 2px solid black;
+}
+.main-1 select{
+    width: 50%;
+    font-size: 120%;
+}
+.main-1 label{
+    font-size: 95%;
+    font-weight: bold;
+    line-height: 150%;
+    width: 100%;
+    padding: 0px 0px 3px 0px;
+    margin: 0px;
+    white-space: normal;
+    border: none;
+    display: block;
+}
+.main-2 select{
+    width: 50%;
+    font-size: 120%;
+}
+.main-2 label{
+    font-size: 95%;
+    font-weight: bold;
+    width: 100%;
+}
+.main-3 input{
+    margin-left: 1%;
+}
+span.symbol{
+    font-size: 120%;
+    line-height: 135%;
+}
+.main-font label.span.Cents{
+    float: left;
+}
+.main-font span{
+    float: left;
+}
+.main-font label{
+
+}
+#t1{border: 1px solid black;}

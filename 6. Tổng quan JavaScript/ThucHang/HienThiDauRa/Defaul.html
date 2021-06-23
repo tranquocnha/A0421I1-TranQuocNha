@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị đầu ra</title>
+</head>
+<body>
+--bai1-- <br/>
+    <button type="button" onclick="showMessage();">Click me</button>
+<script>
+    function showMessage() {
+        alert("xin chao");
+    }
+</script>
+<br>
+--bai2--
+<br>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage1()">click me bai 2</button>
+<script>
+    function showMessage1() {
+        document.getElementById("messageDiv").innerHTML = "xin chào!";
+    }
+</script>
+<br>
+--bai3--
+<br>
+<button type="button" onclick="showMessage2()">click me bai 3</button>
+<script>
+    function showMessage2() {
+        document.write("xin chào");
+    }
+</script>
+<br>
+--bai4--
+<br>
+<button type="button" onclick="showMessage3()">click me bai 4</button>
+<script>
+    function showMessage3(){
+        console.log("xin chào");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="400px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class Rectangle{
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+        getArea(){
+            return this.length*this.width;
+         }
+        getPerimeter(){
+            return (this.length+this.width)*2;
+        }
+        getCanvas(){
+            let canvas = document.getElementById("myCanvas");
+            let context = canvas.getContext("2d");
+            context.rect(50, 50, this.width*5, this.length*5);
+            context.strokeStyle = "yellow";
+            context.stroke();
+            res.innerHTML = `width = ${this.width}, height = ${this.length}`
+        }
+    }
+    let rectangle = new Rectangle(20,50);
+    alert("Dien tich "+ rectangle.getArea());
+    alert("Chu vi " + rectangle.getPerimeter());
+    alert(rectangle.getCanvas())
+</script>
+</body>
+</html>

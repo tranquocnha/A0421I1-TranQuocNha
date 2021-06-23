@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mydate{
+        constructor(day,month,year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        }
+        display(){
+            return (this.day+ " " + this.month + " " +this.year);
+        }
+    }
+    let myDate1 = new Mydate(10,10,2009);
+    alert(myDate1.display());
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Check Palindrome Array</p>
+<label for="Palindrome"> Array : </label>
+<input id='Palindrome' type="text" value="">
+<input id="btn" type="button" value="Check">
+<div id="result"><br></div>
+<script>
+    let btn = document.getElementById("btn");
+    let res = document.getElementById("result");
+    btn.addEventListener('click', () => {
+        let str = document.getElementById("Palindrome").value;
+        isChecked(str);
+    });
+
+    function isChecked(str) {
+        if (str[0] == str[str.length - 1]) {
+            if (str.length === 1) {
+                res.innerHTML = 'Array is PALINDROME array';
+                return;
+            }
+            var newStr = str.slice(1,str.length-1);
+            isChecked(newStr);
+        } else {
+            res.innerHTML = 'Array is NOT PALINDROME array';
+            return;
+        }
+    }
+</script>
+</body>
+</html>

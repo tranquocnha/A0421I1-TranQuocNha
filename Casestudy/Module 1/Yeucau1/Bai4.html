@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let h=5;
+    let result ='';
+    let res = document.getElementById("result");
+    for(let i = 1; i <= h; i++)
+    {
+        for (let j = 1; j < 2*h; j++)
+        {
+            if(Math.abs(h - j) == i - 1 || i == h)
+            {
+                result += "*";
+            } else
+            {
+                result += "&nbsp&nbsp";
+            }
+        }
+        result += "<br/>";
+    }
+    res.innerHTML = result;
+</script>
+</body>
+</html>

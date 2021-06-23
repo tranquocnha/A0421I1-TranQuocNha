@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bai1
+    function binhphuong(x) {
+        return x*x;
+    }
+    //alert("binh phuong"+binhphuong(2));
+    //bai2
+    function dientich_hinhtron(r) {
+        return r*r*3.14
+    }
+    //bai 2
+    function chuvi_hinhtron(r) {
+        return 2*r*3.14
+    }
+    //bai3
+    function giaithua(n) {
+        let result=1;
+        for (let i=1;i<=n;i++) {
+            result = result*i;
+        }
+        return result;
+    }
+    //bai4
+    function checknumber(n) {
+        if(isNaN(n)){
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    alert(checknumber("a"));
+    //bai5
+    function min(a,b,c) {
+        let mini = a;
+        if (mini>b) {
+            mini = b
+        }
+        if (mini>c){
+            mini = c
+        }
+        return mini;
+    }
+    //bai6
+    function checkInteger(n) {
+        if(n>0||isNaN(n)){
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    //bai 7
+    function swap(a,b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        console.log(a,b);
+    }
+    //bai 8
+    function swapArr(arr) {
+        return reserve(arr)
+    }
+    //bai 9
+    function swapArray(array,arrayV) {
+        for(var k=0;k<array.length;k++){
+            if(array[k]==arrayV){
+                return true;
+            }
+        }
+    }
+    var array=["a","b","c","d"];
+    var arrayV = [prompt("nhap mang cần tìm")];
+    alert(swapArray(array,arrayV));
+</script>
+</body>
+</html>

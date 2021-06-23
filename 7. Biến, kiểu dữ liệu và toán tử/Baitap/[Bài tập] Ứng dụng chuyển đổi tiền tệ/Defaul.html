@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <script src="Defaulcss.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <th><input type="text" name="" id="money"></th>
+            <th>
+                <select id="typefrom" name="">
+                    <option value="Vietnam" >VietNam</option>
+                    <option value="My" >Mỹ</option>
+                    <option value="ThaiLan">Thái Lan</option>
+                </select>
+            </th>
+            <th>
+                <select id="typeto" name="">
+                    <option value="USD">USD</option>
+                    <option value="Batthailan">Bạt Thái Lan</option>
+                    <option value="dong">Đồng</option>
+                </select>
+            </th>
+            <th>
+                <button name="" id="submit" onclick="Calculate()">Submit</button>
+            </th>
+        </tr>
+    </table>
+        <div>
+            <label for="total">Total: </label>
+            <input type="text" name="" id="total">
+        </div>
+
+</body>
+</html>

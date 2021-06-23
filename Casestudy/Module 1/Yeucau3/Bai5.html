@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var giaCaFe =0;
+    var giaCam =0;
+    var giaCaRot =0;
+    var giaCaChua =0;
+    var giaNuocLoc =0;
+    var giaNuocDua=0;
+    function Menu() {
+        let chonMon = parseInt(prompt("1. Cafe 10k/ly"+"\n" + "2. Nước cam 30k/ly" + "\n" + "3. Nước ép cà rốt 25k/ly" + "\n" +  "4. Nước ép cà chua 20k/ly" +"\n"+
+            "5. Nước lọc 10k/chai" +"\n" + "6. Nước dừa 40k/trái"+"\n" + "7. Thoát."));
+        switch (chonMon) {
+            case 1:
+                Cafe();
+                break;
+            case  2:
+                NuocCam();
+                break;
+            case 3:
+                CaRot();
+                break;
+            case 4:
+                CaChua();
+                break;
+            case 5:
+                NuocLoc();
+                break;
+            case 6:
+                NuocDua();
+                break;
+            case 7:
+                break;
+            default:
+                alert("Nhập lại");
+        }
+    }
+    function Cafe() {
+        let mon1 = parseInt(prompt("Số ly muốn oder: "));
+        giaCaFe  = mon1*10000;
+        alert(giaCaFe);
+        Menu();
+    }
+    function NuocCam() {
+        let mon2 = parseInt(prompt("Số ly muốn oder: "));
+        giaCam = mon2*30000;
+        alert(giaCam);
+        Menu();
+    }
+    function CaRot() {
+        let mon3 = parseInt(prompt("Số ly muốn oder: "));
+        giaCaRot = mon3 *25000;
+        alert(giaCaRot);
+        Menu();
+    }
+    function CaChua() {
+        let mon4 = parseInt(prompt("Số ly muốn oder: "));
+        giaCaChua = mon4 * 20000;
+        alert(giaCaChua);
+        Menu();
+    }
+    function NuocLoc() {
+        let mon5 = parseInt(prompt("Số chai muốn oder: "));
+        giaNuocLoc  = mon5*10000;
+        alert(giaNuocLoc);
+        Menu();
+    }
+    function NuocDua() {
+        let mon6 = parseInt(prompt("Số trái muốn oder:" ));
+        giaNuocDua = mon6 * 40000;
+        alert(giaNuocDua);
+        Menu();
+    }
+    Menu();
+</script>
+</body>
+</html>

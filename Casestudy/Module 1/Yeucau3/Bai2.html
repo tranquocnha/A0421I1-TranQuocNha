@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrNumberA = [7,2,5,3,5,3];
+    let  arrNumberB = [7,2,5,4,6,3,4,3];
+    let arrayNumberC = [];
+    for(let i=0;i<arrNumberB.length;i++){
+        var isContain = false;
+        for(let j=0;j<arrNumberA.length;j++){
+            if(arrNumberB[i]===arrNumberA[j]){
+                isContain=true;
+                break;
+            }
+        }
+        if(!isContain){
+            arrayNumberC.push(arrNumberB[i]);
+        }
+    }
+    for (let i = 0; i < arrayNumberC.length; i++) {
+        document.write("array["+i+"]="+arrayNumberC[i]+"<br/>")
+    }
+</script>
+</body>
+</html>

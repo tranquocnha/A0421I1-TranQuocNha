@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class TV {
+        constructor(channel,volume) {
+            this.channel=channel;
+            this.volume=volume;
+        }
+        status=false;
+        turn() {
+            this.status=!this.status;
+        }
+        changeChannelTV(b) {
+            this.channel=b;
+        }
+        changeVolumeTV(volume) {
+            this.volume+=volume;
+        }
+        changeChannel(channel) {
+            return TV.channel = channel;
+        }
+    }
+
+    class Remote {
+        constructor(tv) {
+            this.tv=tv;
+        }
+        batTatRM() {
+            this.tv.turn();
+        }
+        changeChannelRM(b) {
+            this.tv.changeChannelTV(b);
+        }
+        changeVolumeRM(volume) {
+            this.tv.changeVolumeTV(volume);
+        }
+
+    }
+    let sony = new TV(1,50);
+    let pana = new Remote(sony);
+    console.log(sony.status);
+    pana.batTatRM();
+    console.log(sony.status);
+    pana.changeChannelRM(3);
+    console.log(sony.channel);
+    pana.changeChannelRM(7);
+    console.log(sony.channel);
+    pana.changeVolumeRM(2);
+    console.log(sony.volume);
+    console.log(sony.status);
+    pana.batTatRM();
+    console.log(sony.status);
+</script>
+</body>
+</html>
