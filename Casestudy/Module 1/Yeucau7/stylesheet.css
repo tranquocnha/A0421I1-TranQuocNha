@@ -1,0 +1,79 @@
+h1,h2,h3,h4,h5,h6,body{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.header-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container-main{
+    display: flex;
+    width: 100%;
+}
+
+.container-main  img{
+    margin-left: 12px;
+}
+
+.container{
+    margin-top:20px;
+}
+.hr1{
+    margin-top: 30px;
+}
+.logo{
+    margin-top: -10px;
+}
+.casestudy{
+
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+}
+.hr2{
+    margin-top: 30px;
+}
+/*.hr3{*/
+/*    ;*/
+/*}*/
+
+.main-container{
+    display: flex;
+    height: 70vh;
+    width: 100%;
+}
+
+.main-left{
+    width: 300px;
+    border: 2px solid #333;
+    border-left-style: none;
+}
+
+/*.select-container{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-content: center;*/
+/*flex-direction: column;*/
+/*}*/
+
+select{
+    width: 100px;
+    text-align: center;
+}
+
+.bai1,.bai2,.bai3,.bai4, .bai5{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin:15px  0px;
+    padding: 5px 10px;
+}
+
+
+.main-right{
+    width: calc(100% - 300px);
+    background: blueviolet;
+}

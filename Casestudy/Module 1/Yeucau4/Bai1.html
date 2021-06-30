@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoiTruoc = prompt("Chuỗi cần chuẩn hóa: ").toString();
+    console.log("Chuỗi trước khi chuẩn hóa " +chuoiTruoc);
+    let xoaKhoangTrang = chuoiTruoc.split(" ");
+    let chuoiSau = [];
+
+    function chuanHoa() {
+        for (let i = 0; i < xoaKhoangTrang.length; i++) {
+            for (let j = 0; j < xoaKhoangTrang[i].length; j++) {
+                if (j === 0) {
+                    chuoiSau.push(xoaKhoangTrang[i][j].toUpperCase());
+                    continue;
+                }
+                chuoiSau.push(xoaKhoangTrang[i][j].toLowerCase());
+            }
+            chuoiSau.push(" ");
+        }
+        console.log("Chuỗi sau khi chuẩn hóa: " + chuoiSau.join("") );
+    }
+    function tuDaiNhat() {
+        let str =chuoiTruoc.split(" ");
+        let dainhat =0;
+        let tu = [];
+        for (let i=0; i< str.length; i++){
+            if (dainhat<str[i].length){
+                dainhat = str[i].length;
+                tu =str[i];
+            }
+        }
+        return tu;
+    }
+    chuanHoa();
+    console.log("Từ dài nhất là: "+tuDaiNhat(chuoiTruoc));
+</script>
+</body>
+</html>
