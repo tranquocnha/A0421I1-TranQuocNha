@@ -7,6 +7,7 @@
 <body>
 <h1 style="color: red">Xổ Số</h1>
 <p>Bạn có tin mình là người may mắn không?</p>
+
 <script>
     class XoSo {
         constructor(so1, so2, so3, so4, so5, so6) {
@@ -17,51 +18,39 @@
             this.so5 = so5;
             this.so6 = so6;
         }
-
         getSo1() {
             return this.so1;
         }
-
         getSo2() {
             return this.so2;
         }
-
         getSo3() {
             return this.so3;
         }
-
         getSo4() {
             return this.so4;
         }
-
         getSo5() {
             return this.so5;
         }
-
         getSo6() {
             return this.so6;
         }
-
         setSo1(so1) {
             this.so1 = so1;
         }
-
         setSo2(so2) {
             this.so2 = so2;
         }
-
         setSo3(so3) {
             this.so3 = so3;
         }
-
         setSo4(so4) {
             this.so4 = so4;
         }
-
         setSo5(so5) {
             this.so5 = so5;
         }
-
         setSo6(so6) {
             this.so6 = so6;
         }
@@ -150,15 +139,24 @@
         let result ="<p>Bạn có tin mình là người may mắn không?</p>" +
             "<h1 style=\"color: red\">Xổ Số</h1>" +
             "<input type='button' value='Mua Vé' onclick='chonXoSo()'>" +
-            "<input type='button' value='Xem Kết Quả' onclick='ketqua()'><table border='1'>";
+            "<input type='button' value='Xem Kết Quả' onclick='ketqua()'><table style='border: 1px solid #1c1c1c;\n" +
+            "    text-align: center;\n" +
+            "    width: 30%;'>";
         for(let i =0; i<arrVeSO.length;i++) {
-            result+="<tr>";
-            result+="<td>"+arrVeSO[i].so1+"</td>";
-            result+="<td>"+arrVeSO[i].so2+"</td>";
-            result+="<td>"+arrVeSO[i].so3+"</td>";
-            result+="<td>"+arrVeSO[i].so4+"</td>";
-            result+="<td>"+arrVeSO[i].so5+"</td>";
-            result+="<td>"+arrVeSO[i].so6+"</td>";
+            result+="<tr style='    border: 1px solid #1c1c1c;\n" +
+                "    text-align: left;'>";
+            result+="<td style='    border: 1px solid #1c1c1c;\n" +
+                "    text-align: left;'> "+arrVeSO[i].so1+"</td>";
+            result+="<td style='    border: 1px solid #1c1c1c;\n" +
+                "    text-align: left;'>"+arrVeSO[i].so2+"</td>";
+            result+="<td style='    border: 1px solid #1c1c1c;\n" +
+                "    text-align: left;'>"+arrVeSO[i].so3+"</td>";
+            result+="<td style='    border: 1px solid #1c1c1c;\n" +
+                "    text-align: left;'>"+arrVeSO[i].so4+"</td>";
+            result+="<td style='    border: 1px solid #1c1c1c;\n" +
+                "    text-align: left;'>"+arrVeSO[i].so5+"</td>";
+            result+="<td style='    border: 1px solid #1c1c1c;\n" +
+                "    text-align: left;'>"+arrVeSO[i].so6+"</td>";
             result+="</tr>";
         }
         result+="</table>";
@@ -176,23 +174,22 @@
             alert("Bạn đã mua quá 4 lần")
         }else{
             for(let i =0;i<arrVeSO.length;i++){
-                if (giaiDacBiet.so1 === arrVeSO[i].so1 && giaiDacBiet.so2 === arrVeSO[i].so2 && giaiDacBiet.so3 === arrVeSO[i].so3 && giaiDacBiet.so4 === arrVeSO[i].so4 && giaiDacBiet.so5 === arrVeSO[i].so5 && giaiDacBiet.so6 === arrVeSO[i].so6) {
+                if (giaiDacBiet.so1 === arrVeSO[i].so1 && giaiDacBiet.so2 === arrVeSO[i].so2 && giaiDacBiet.so3 === arrVeSO[i].so3 &&
+                    giaiDacBiet.so4 === arrVeSO[i].so4 && giaiDacBiet.so5 === arrVeSO[i].so5 && giaiDacBiet.so6 === arrVeSO[i].so6) {
                     alert("Chúc Mừng bạn đã trúng Giải Nhất +10.000.000VND")
-                } else {
-                    if (giaiDacBiet.so3 === arrVeSO[i].so3 && giaiDacBiet.so4 === arrVeSO[i].so4 && giaiDacBiet.so5 === arrVeSO[i].so5 && giaiDacBiet.so6 === arrVeSO[i].so6) {
+                } else if (giaiDacBiet.so3 === arrVeSO[i].so3 && giaiDacBiet.so4 === arrVeSO[i].so4 && giaiDacBiet.so5 === arrVeSO[i].so5
+                    && giaiDacBiet.so6 === arrVeSO[i].so6) {
                         alert("Chúc Mừng bạn đã trúng Giải Nhì +5.000.000VND")
-                    }
-                    if (giaiDacBiet.so4 === arrVeSO[i].so4 && giaiDacBiet.so5 === arrVeSO[i].so5 && giaiDacBiet.so6 === arrVeSO[i].so6) {
+                } else if (giaiDacBiet.so4 === arrVeSO[i].so4 && giaiDacBiet.so5 === arrVeSO[i].so5 && giaiDacBiet.so6 === arrVeSO[i].so6) {
                         alert("Chúc Mừng bạn đã trúng Giải Ba +1.000.000VND")
-                    } else {
+                } else {
                         alert("Chúc bạn may mắn lần sau")
-                    }
                 }
             }
-
         }
-        document.write("Giải đặc biệt là: "+giaiDacBiet.so1+" "+giaiDacBiet.so2+" "+giaiDacBiet.so3+" "+giaiDacBiet.so4+" "+giaiDacBiet.so5+" "+giaiDacBiet.so6+" ")
-    }
+        document.write("Giải đặc biệt là: "+giaiDacBiet.so1+" "+giaiDacBiet.so2+" "+giaiDacBiet.so3+" "+giaiDacBiet.so4+" "+giaiDacBiet.so5+" "+giaiDacBiet.so6+" ");
+        }
+
 display()
 
 </script>
