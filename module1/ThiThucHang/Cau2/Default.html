@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function  isMainNumber(){
+        let numberA = parseInt(prompt("Nhập số chính phương"));
+        let i=0;
+        while (i*i<=numberA){
+            if(i*i === numberA){
+                return true;
+            }
+            i++
+        }
+        return false;
+    }
+    document.write(isMainNumber());
+</script>
+</body>
+</html>

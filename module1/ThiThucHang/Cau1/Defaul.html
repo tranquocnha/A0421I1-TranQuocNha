@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for(let i=0;i<5;i++){
+        array[i] = parseInt(prompt("Nhap vao gia tri mang thu ["+ (i)+"]"));
+        document.write("array["+i+"]="+array[i]+"<br/>")
+    }
+    array.sort(function(a, b){return a - b});
+    document.write("Mang sau khi sap xep :"+array);
+</script>
+</body>
+</html>

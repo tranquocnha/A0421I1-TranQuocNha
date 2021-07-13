@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Quản lý học sinh</h1>
+<input type="text" placeholder="nhập stt" id="stt">
+<input type="text" placeholder="Họ và tên" id="hoten">
+<input type="date" placeholder="Ngày sinh" id="ngaysinh" t>
+<input type="text" placeholder="Điểm trung bình" id="diemtb">
+<input type="button" onclick="nhap()" value="Thêm" /><br/>
+<p id="hienThi"></p>
+<script>
+    class QLHS{
+        constructor(stt, hoten, ngaysinh, diemtb) {
+            this.stt = stt;
+            this.hoten = hoten;
+            this.ngaysinh = ngaysinh;
+            this.diemtb = diemtb;
+        }
+        setStt(stt){
+            this.stt = stt;
+        }
+        getStt(){
+            return this.stt;
+        }
+        setHoten(hoten){
+            this.hoten = hoten;
+        }
+        getHoten(){
+            return this.hoten;
+        }
+        setNgaysinh(ngaysinh){
+            this.ngaysinh = ngaysinh;
+        }
+        getNgaysinh(){
+            return this.ngaysinh;
+        }
+        setDiemtb(diemtb){
+            this.diemtb = diemtb;
+        }
+        getDiemtb(){
+            return this.diemtb;
+        }
+
+    }
+    let arrayHocsinh =[];
+    display(arrayHocsinh);
+
+    function nhap() {
+        let stt = document.getElementById("stt").value;
+        let hoten = document.getElementById("hoten").value;
+        let ngaysinh = document.getElementById("ngaysinh").value;
+        let diemtb = document.getElementById("diemtb").value;
+        let student = new QLHS(stt, hoten, ngaysinh, diemtb);
+        arrayHocsinh.push(student);
+        document.getElementById("stt").value = "";
+        document.getElementById("hoten").value = " ";
+        document.getElementById("ngaysinh").value = " ";
+        document.getElementById("diemtb").value = " ";
+        display(arrayHocsinh);
+    }
+    function display(arrayProduct) {
+        let result = '<table border="1">\n' +
+            '<tr>\n ' +
+            '<th>STT</th>' +
+            '<th>Họ Tên</th>' +
+            '<th>Ngày sinh</th>' +
+            '<th>Điểm trung bình</th>' +
+            '</tr>';
+        for (let i =0; i<arrayProduct.length; i++){
+            console.log(arrayProduct);
+            result += '<tr>\n' +
+                '<td>' + arrayProduct[i].getStt() + '</td>\n' +
+                '<td>' + arrayProduct[i].getHoten() + '</td>\n' +
+                '<td>' + arrayProduct[i].getNgaysinh()+ '</td>\n' +
+                '<td>' + arrayProduct[i].getDiemtb() + '</td>\n' +
+                '<td><input type="button" onclick="Kiemtra(' + i + ')" value="Kiểm tra"></td>\n' +
+                '</tr>'
+        }
+        result += '</table>';
+        document.getElementById("hienThi").innerHTML =result;
+    }
+    function Kiemtra(index) {
+        if (arrayHocsinh[index].getDiemtb()>8){
+            return  alert("Học sinh giỏi");
+        }else if (arrayHocsinh[index].getDiemtb()>6.5 && arrayHocsinh[index].getDiemtb()<=8){
+            return alert("Học sinh khá");
+        }else if (arrayHocsinh[index].getDiemtb()> 5&& arrayHocsinh[index].getDiemtb()<=6.5){
+            return alert("Học sinh trung bình");
+        }else if (arrayHocsinh[index].getDiemtb()>3.5 && arrayHocsinh[index].getDiemtb()<=5){
+            return alert("Học sinh yếu");
+        }else {
+            return alert("Hoc sinh Kém");
+        }
+    }
+</script>
+</body>
+</html>
