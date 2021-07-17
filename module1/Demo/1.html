@@ -6,33 +6,15 @@
 </head>
 <body>
 <script>
-    function diagonalDifference(arr) {
-        // Write your code here
-        let arrsumleft=0;
-        let arrsumright=0;
-        let countleft =0;
-        let countright = arr.length - 1;
-        let temp=0;
-        for(let i =0;i<=arr.length;i++){
-            for(let j=0;j<arr.length;j++){
-                if(arr[i][j]>=-100&&arr[i][j]<=100){
-                    if(i==countleft&&j==countleft){
-                        arrsumleft = arrsumleft + arr[i][j];
-                        countleft++;
-                    }
-                    if(i=temp&&j==countright){
-                        arrsumleft = arrsumleft + arr[i][j];
-                        countright--;
-                        temp++;
-                    }
-                }
-            }
-        }
-        let sum = Math.abs(arrsumleft,arrsumright);
-        return sum;
-    }
-    let arr =[[1,2,3], [4,5,6], [9,8,9]];
-    console.log(diagonalDifference(arr))
+    let x = 5;
+
+    do{
+
+        console.log("CodeGy");
+
+        x--;
+
+    } while(x == 5);
 </script>
 </body>
 </html>
