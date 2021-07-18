@@ -28,7 +28,7 @@ public class Xoa_Phan_Tu {
         int temp;
         System.out.println("Nhap gia tri can xoa trong mang");
         temp = scanner.nextInt();
-        boolean check = true;
+        boolean check = false;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == temp) {
                 check = true;

@@ -10,7 +10,14 @@ public class Tim_Sum {
         int[][] arr = new int[row][col];
         nhapMangHaiChieu(arr,row,col,scanner);
         inMang(arr,row,col);
-        totalRow(arr,row,col);
+        System.out.println("\n nhap cot can tinh tong");
+        int numberCol = scanner.nextInt();
+        if(numberCol<=col){
+            System.out.println("tong cac phan tu trong cot " + numberCol + " la " + totalRow(arr,numberCol));
+        }else {
+            System.out.println("khong tim thay cot can tinh tong trong mang");
+        }
+
     }
     public static int soluongHang(Scanner scanner){
         int n;
@@ -37,7 +44,7 @@ public class Tim_Sum {
     public static void nhapMangHaiChieu(int[][] arr,int row,int col,Scanner scanner){
         for (int i=0;i<row;i++){
             for (int j=0;j<col;j++){
-                System.out.print("nhap phan tu"+"["+(i+1)+"]"+" thu"+"["+(j+1)+"]=");
+                System.out.print("nhap phan "+"["+(i+1)+"]"+"["+(j+1)+"]=");
                 arr[i][j]=scanner.nextInt();
             }
         }
@@ -50,17 +57,11 @@ public class Tim_Sum {
             }
         }
     }
-    public static int totalRow(int[][] arr,int row,int col){
-        int count=0;
-        for (int i=0;i<=row;i++){
-            for (int j=0;j<=col-1;j++){
-                count+=arr[i][j];
-                if (j==col-1){
-                    System.out.println("tong các phần tử trong hàng "+(i+1)+" là "+count);
-                    count=0;
-                }
-            }
+    public static int totalRow(int[][] arr,int numberCol){
+        int sum=0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i][numberCol-1];
         }
-        return count;
+        return sum;
     }
 }
