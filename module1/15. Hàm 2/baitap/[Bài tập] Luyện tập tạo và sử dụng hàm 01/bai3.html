@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="a">
+<input type="text" id="b">
+<input type="button" value="Compare" id="btn">
+<div id="result"></div>
+<SCRIPT>
+    var btn = document.getElementById("btn");
+    var res = document.getElementById("result");
+    btn.addEventListener("click",function(){
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        if (a==b) {
+            res.innerHTML = "a = b";
+        } else if(a>b){
+            res.innerHTML = "a > b";
+        }
+        else {
+            res.innerHTML = "a < b ";
+        }
+    })
+</SCRIPT>
+</body>
+</html>

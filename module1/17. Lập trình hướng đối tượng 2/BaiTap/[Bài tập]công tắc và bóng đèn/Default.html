@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="diplay"></div>
+<script>
+    class ElectriclLamp{
+        constructor(status) {
+            this.status = status;
+        }
+        turnOn(){
+            return this.status = true;
+        }
+        turnOff(){
+
+            return this.status = false;
+        }
+
+    }
+    class SwitchButton{
+        constructor(status,count) {
+            this.status = status;
+            this.count= count;
+            this.lamp = new ElectriclLamp(status);
+        }
+        getLamp(){
+            return this.lamp;
+        }
+        setLamp(lamp){
+            this.lamp = lamp;
+        }
+        connectToLamp(){
+            return this.lamp = ElectriclLamp;
+        }
+        switchOn(){
+             alert("Đèn đã bật");
+             return this.lamp = true;
+        }
+        switchOff(){
+                alert("Đèn đã tắt");
+                return this.lamp = false;
+        }
+        getCount(){
+            return this.count++;
+        }
+        setCount(count){
+            this.count=count;
+        }
+    }
+        let deskLamp = new ElectriclLamp(true);
+        let switchButton = new SwitchButton(true,0);
+        switchButton.connectToLamp(deskLamp);
+        let Off = "<button type='button' onclick='switchOff();'> Off </button>";
+        let On = "<button type='button' onclick='switchOn();'> On </button>";
+        document.getElementById("diplay").innerHTML = Off + On;
+        function switchOff() {
+            if(switchButton.switchOff()===true){
+            }else if(switchButton.getCount()>=10){
+                    alert("đã quá 10 lần");
+                    return count;
+
+            }
+        }
+        function switchOn() {
+            if(switchButton.switchOn()===false){
+            }else if(switchButton.getCount()>=10){
+                    alert("đã quá 10 lần");
+                    return count;
+                }
+
+        }
+</script>
+</body>
+</html>

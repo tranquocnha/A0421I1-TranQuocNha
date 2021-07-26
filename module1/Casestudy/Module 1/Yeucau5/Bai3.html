@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+    let m = parseInt(prompt("Nhập m:"));
+    let n = parseInt(prompt("Nhập n:"));
+    let array = [];
+    let max = 0;
+    let min =0;
+    for (let i = 0; i < m; i++) {
+        array[i] = [];
+        for (let j = 0; j < n; j++) {
+            array[i][j] = parseInt(prompt("Nhập array[" + i + "][" + j + "] = "));
+        }
+    }
+    function seachMax(array,m,n) {
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (array[i][j] > max) {
+                    max =array[i][j];
+                }
+            }
+        }
+        return max;
+        //document.write("Max = " +max+"<br/>");
+    }
+    function seachMin(array,m,n) {
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (array[i][j] < min ) {
+                    min = array[i][j];
+                }
+                if (i === 0 && j === 0) {
+                    min =array[i][j];
+                }
+            }
+        }
+        return min;
+        //document.write("Min = " +min+"<br/>");
+    }
+    document.write("Max = " +seachMax(array, m,n)+"<br/>");
+    document.write("Min = " +seachMin(array, m,n ));
+</SCRIPT>
+</body>
+</html>

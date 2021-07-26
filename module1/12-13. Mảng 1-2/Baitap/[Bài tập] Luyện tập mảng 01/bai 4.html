@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<html>
+<body>
+<h2>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</h2>
+<script>
+    var array= [];
+    do{
+        var n = parseInt(prompt("nhap vao bao nhieu gia tri trong mang"));
+    }while(n<0);
+    for(var i=0;i<n;i++){
+        array[i] = parseInt(prompt("Nhap vao gia tri mang thu ["+ (i)+"]"));
+        document.write("array["+i+"]="+array[i]+"<br/>")
+    }
+    arrayA=array.reverse();
+        document.write(arrayA.join());
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 1: Viết một chương trình C++ để nhập lương nhân viên, tính thuế thu nhập và lương ròng .</h2>
+<label>Nhap luong nhan vien</label><input type="text" id="salary" value="">
+<input type="button" onclick="submit()" value="submit">
+<p id="result"></p>
+<script>
+    function submit() {
+        let salary = parseInt(document.getElementById("salary").value);
+        let res = document.getElementById("result");
+        if(salary>15000000){
+            salary = salary*0.8;
+        }else if(salary>700000 && salary<=15000000){
+            salary = salary*0.9;
+        }else {
+            salary = salary*0.95;
+        }
+        res.innerHTML = "luong nhan duoc sau khi tinh thue: "+salary;
+    }
+</script>
+</body>
+</html>

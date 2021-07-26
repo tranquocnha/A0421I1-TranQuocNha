@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+        getCelsiusF(){
+            return  (this.celsius-32)/1.8;
+        }
+        getCelsiuK(){
+            return (this.celsius)+273.15;
+        }
+    }
+    let temperature = new Temperature(50);
+    alert("Đổi C->F " +temperature.getCelsiusF());
+    alert("Đổi C->K " +temperature.getCelsiuK());
+</script>
+</body>
+</html>

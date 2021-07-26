@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi</h2>
+<script>
+    var array= [];
+    var count =0;
+    do{
+        var n = parseInt(prompt("nhap vao bao nhieu gia tri trong mang"));
+    }while(n<0);
+    for(var i=0;i<n;i++){
+        array[i] = parseInt(prompt("Nhap vao gia tri mang thu ["+ (i)+"]"));
+        document.write("array["+i+"]="+array[i]+"<br/>")
+    }
+    for(let j=0;j<array.length;j++){
+        if(array[j]<0){
+            count++;
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>

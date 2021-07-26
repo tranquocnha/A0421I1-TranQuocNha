@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayX = ["c", "s", "c", 2, 6, 1];
+    let first = 0;
+    let last = arrayX.length - 1;
+    while (first < last) {
+        let arrayB = arrayX[first];
+        arrayX[first] = arrayX[last];
+        arrayX[last] = arrayB;
+        first++;
+        last--;
+    }
+    document.write(arrayX);
+</script>
+</body>
+</html>

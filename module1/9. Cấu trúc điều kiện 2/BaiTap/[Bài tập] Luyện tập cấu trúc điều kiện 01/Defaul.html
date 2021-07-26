@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p><h2>Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</h2></p>
+    <label>Number a</label><input type="text" name="" id="a" value="" size="20"><br>
+    <label>Number b</label><input type="text" name="" id="b" value="" size="20"><br>
+    <input type="button" value="div" onclick="AdivB()">
+    <div id="total"><br></div>
+</div>
+<div>
+    <p><h2>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</h2></p>
+    <label>Nhập tuổi</label>&nbsp;&nbsp<input type="text" name="" id="t1" value="" size="20"><br>
+    <input type="button" id="ageStudent" value="submit age" size="20" onclick="agestudin()">
+    <div id="total1"></div>
+</div>
+<div>
+    <p><h2>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</h2></p>
+    <label>Nhập số nguyên</label>&nbsp;&nbsp<input type="text" name="" id="songuyen" value="" size="20"><br>
+    <input type="button" value="submit songuyen" size="20" onclick="submitint()">
+    <div id="total2"></div>
+</div>
+<div>
+    <p><h2>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</h2></p>
+    <label>Num 1</label><input type="text" name="" id="n1" value="" size="20"><br>
+    <label>Num 2</label><input type="text" name="" id="n2" value="" size="20"><br>
+    <label>Num 3</label><input type="text" name="" id="n3" value="" size="20"><br>
+    <input type="button"  value="Check" onclick="findMax()">
+    <div id="total3"><br></div>
+</div>
+<div>
+    <p><h2>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h2></p>
+    <label>Bài kiểm tra</label>&nbsp;&nbsp<input type="text" name="" id="kiemtra" value="" size="20"><br>
+    <label>Thi giữa kì</label>&nbsp;&nbsp<input type="text" name="" id="giuaki" value="" size="20"><br>
+    <label>thi cuối kì</label>&nbsp;&nbsp<input type="text" name="" id="cuoiki" value="" size="20"><br>
+    <input type="button" value="check" onclick="kiemtra()">
+    <p><i>Notes:</i> Formula : Rank = ((Bài kiểm tra) + (Thi giữa kì)*2 + (thi cuối kì)*4)/7 </p>
+    <div id="total4"></div>
+</div>
+<div>
+    <p><h2>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h2></p>
+    <label for="sales">Sales:(VND)</label>
+    <input type="text" size="10px" id="sales">
+    <label for="amount">Amount:(VND)</label>
+    <input type="text" size="10px" id="amount">
+    <input type="button" value="Benefit" onclick="benefit()">
+    <p id="total5"><br></p>
+</div>
+<div>
+    <p><b>Bài 7 :</b> Tính cước điện thoại cho một hộ gia đình với các thông số đã cho.</p>
+    <label for="tax">tax:</label>
+    <input type="text" size="10px" id="tax">
+    <label for="amountNum">Amount:</label>
+    <input type="text" size="10px" id="amountNum">
+    <input type="button" value="Pay" onclick="Pay()">
+    <p id="total6"><br></p>
+</div>
+<script>
+    function AdivB() {
+        var inputa = document.getElementById('a').value;
+        var a = parseInt(inputa);
+        var  inputb = document.getElementById('b').value;
+        var b = parseInt(inputb);
+        var total = document.getElementById('total');
+        if (isNaN(a)==true || isNaN(b)==true) {
+            total.innerHTML = "<b>Input must be a number !</b>";
+        } else {
+            if (a%b == 0) {
+                total.innerHTML = "<b> a is div by b.</b>";
+            } else {
+                total.innerHTML = "<b> a is NOT div by b.</b>";
+            }
+        }
+    }
+    function agestudin() {
+        var inputt = document.getElementById('t1').value;
+        var t1 = parseInt(inputt);
+        var total1 = document.getElementById('total1');
+        if(t1<=15){
+            total1.innerHTML = "Không đủ yêu câu tuoi: " +t1;
+        }
+    }
+    function submitint() {
+        var inputsonguyen = document.getElementById('songuyen').value;
+        var songuyen = parseInt(inputsonguyen);
+        var total2 = document.getElementById('total2');
+        if(songuyen<0){
+            total2.innerText = " đây là số nhỏ hơn 0"
+        }
+        else {
+            total2.innerText = "đây là số lớn hơn 0"
+        }
+    }
+    function findMax() {
+        var inputnum1 = document.getElementById('n1').value;
+        var n1 = parseInt(inputnum1);
+        var inputnum2 = document.getElementById('n2').value;
+        var n2 = parseInt(inputnum2);
+        var inputnum3 = document.getElementById('n3').value;
+        var n3 = parseInt(inputnum3);
+        var total3 = document.getElementById('total3');
+        var max = n1;
+        if(max<n2){
+            max=n2;
+        }else if(max<n3){
+            max=n3;
+        }
+        else {
+            max=n1;
+         }
+        total3.innerText = max;
+    }
+    function kiemtra() {
+        var inputkiemtra = document.getElementById('kiemtra').value;
+        var kiemtra = parseInt(inputkiemtra);
+        if(kiemtra>10){
+            alert(" Nhập từ 1 đến 10");
+        }
+        var inputgiuaki = document.getElementById('giuaki').value;
+        var giuaki = parseInt(inputgiuaki);
+        if(giuaki>10){
+            alert(" Nhập từ 1 đến 10");
+        }
+        var inputcuoiki = document.getElementById('cuoiki').value;
+        var cuoiki = parseInt(inputcuoiki);
+        if(cuoiki>10){
+            alert(" Nhập từ 1 đến 10");
+        }
+        var total4 = document.getElementById('total4');
+        var rank = ((kiemtra) + (giuaki)*2 + (cuoiki)*4)/7;
+        if(isNaN(kiemtra)||isNaN(giuaki)||isNaN(cuoiki)){
+            total4.innerHTML = "<b>Input must be a number</b>"
+        }
+        else if(rank<5)
+        {
+            total4.innerText = "học sinh yêu, điểm là: " + rank;
+        }
+        else if(rank>=5 && rank<6.5){
+            total4.innerText = "hoc sinh trung bình, điểm là: " + rank ;
+        }
+        else if(rank>=6.5 && rank<8){
+            total4.innerText = "hoc sinh kha, điểm là:" + rank;
+        }
+        else {
+            total4.innerText = "hoc sinh gioi, điểm là:" + rank;
+        }
+    }
+    function benefit() {
+        var sales = parseInt(document.getElementById("sales").value);
+        var amount = parseInt(document.getElementById("amount").value);
+        var total = document.getElementById("total5");
+        if (isNaN(sales)==true || isNaN(amount)==true) {
+            total.innerHTML = "<b>Input must be a number !</b>";
+        } else {
+            if (sales> amount) {
+                total.innerHTML = "<b>Benefit equal 30% sales :</b>" + sales * 0.3 +"<b>VND</b>";
+            } else {
+                total.innerHTML = "<b>Benfit equal 10% sales :</b>" + sales * 0.1 +"<b>VND</b>";
+            }
+        }
+    }
+    function Pay() {
+        var tax = parseInt(document.getElementById('tax').value);
+        var amount = parseInt(document.getElementById('amountNum').value);
+        var total6 = document.getElementById('total6');
+        if (isNaN(tax)==true || isNaN(amount)==true) {
+            total6.innerHTML = "<b>Input must be a number !</b>";
+        } else {
+            total6.innerHTML = "<b>Total must be pay :</b>" + tax*amount;
+        }
+    }
+</script>
+</body>
+</html>

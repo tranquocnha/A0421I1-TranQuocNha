@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function differentSymbolsNaive(s) {
+        let arr=[];
+        s = s.split("");
+        s.forEach((element)=>{
+            if(arr.includes(element) === false){
+                arr.push(element);
+            }
+        });
+        return arr;
+    }
+    let s = prompt("Nhap Chuoi: "+toString());
+    console.log("cac ki tu khac nhau "+differentSymbolsNaive(s)+"    do dai cac ki tu khac nhau "+differentSymbolsNaive(s).length);
+</script>
+</body>
+</html>

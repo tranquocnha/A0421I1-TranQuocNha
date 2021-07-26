@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Dictionary(Từ điển)</h2>
+    <label for="en">en :</label>
+    <input type="text" value="" id="en">
+    <input type="button" value="Translate" onclick="trans()">
+    <h1 id="result"><br></h1>
+    <script>
+        let result = document.getElementById("result");
+        function trans() {
+            let input = document.getElementById("en").value;
+            let arrEnglish = ["bird","deep","dog"];
+            let arrVietNam = ["chim","sâu","chó"];
+            for (var i=0;i<arrEnglish.length;i++){
+                if(input == arrEnglish[i]){
+                    result.innerHTML = input + "-->"+arrVietNam[i];
+                    break;
+                }else{
+                    result.innerHTML = "khong co du lieu";
+                }
+
+            }
+
+        }
+
+    </script>
+</body>
+</html>

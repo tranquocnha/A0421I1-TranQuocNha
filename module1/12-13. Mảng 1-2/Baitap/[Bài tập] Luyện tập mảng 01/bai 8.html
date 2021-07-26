@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+    Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</h2>
+<script>
+    var array= [];
+    do{
+        var num = parseInt(prompt("nhap vao bao nhieu gia tri trong mang"));
+    }while(num<0 || isNaN(num));
+    for(let i=0;i<num;i++){
+        array[i] = parseInt(prompt("Nhap vao gia tri mang thu ["+ (i)+"]"));
+        document.write("array["+i+"]="+array[i]+"<br/>")
+    }
+    document.write(<br/>);
+    array.sort(function (a,b) {
+        return b-a;
+    });
+    for(let i=0;i<array.length;i++){
+        document.write("array["+i+"]="+array[i]+"<br/>")
+    }
+</script>
+</body>
+</html>

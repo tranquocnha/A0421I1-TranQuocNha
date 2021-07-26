@@ -1,0 +1,44 @@
+.container{
+    Border: 1px solid #333;
+    width: 700px;
+    background-color: #d2bf73;
+}
+.container label{
+    color: blue;
+}
+.main-3{
+    color: black;
+}
+
+.main{
+    color: blue;
+    background-color: #71cbff;
+    width: 700px;
+}
+.main-4 input{
+    margin-left: 20px;
+    padding: 20px 100px;
+    float: none;
+}
+.main-4{
+    display: flex;
+}
+
+.main-4 label{
+    color: blue;
+    /*margin-bottom: 40px;*/
+}
+.main-5 select{
+    margin-left: 46px;
+}
+.main-3 .GT{
+    color: black;
+}
+.main-6 input{
+    margin-left: 25px;
+}
+.main-8 {
+    margin-left: 80px;
+}
+
+

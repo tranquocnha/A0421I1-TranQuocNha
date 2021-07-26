@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 2: Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh là nguyên âmhay phụ âm</h2>
+<script>
+    let kiemtra = prompt("Nhập kí tự cần kiểm tra: ");
+    switch (kiemtra) {
+        case 'u':
+        case 'e':
+        case 'o':
+        case 'a':
+        case 'i':
+        case 'U':
+        case 'E':
+        case 'O':
+        case 'A':
+        case 'I':
+            alert(kiemtra + " là nguyên âm");
+            break;
+        default:
+            alert(kiemtra+" là phụ âm");
+    }
+</script>
+</body>
+</html>

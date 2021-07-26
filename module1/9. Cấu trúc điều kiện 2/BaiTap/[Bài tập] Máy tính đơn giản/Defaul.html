@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="container">
+<input type="text" id="nhapso" class="main-input">
+<br/>
+<button value="1" class="main-button" onclick="so1();" ><font size="4">1</font></button>
+<button class="main-button" onclick="so2();" ><font size="4">2</font></button>
+<button class="main-button" onclick="so3();" ><font size="4">3</font></button>
+<button class="main-button" onclick="cong();"><font size="4">+</font></button>
+<br/>
+<button class="main-button" onclick="so4();"><font size="4">4</font></button>
+<button class="main-button" onclick="so5();"><font size="4">5</font></button>
+<button class="main-button" onclick="so6();"><font size="4">6</font></button>
+<button class="main-button" onclick="tru();"><font size="4">-</font></button>
+<br/>
+<button class="main-button" onclick="so7();"><font size="4">7</font></button>
+<button class="main-button" onclick="so8();"><font size="4">8</font></button>
+<button class="main-button" onclick="so9();"><font size="4">9</font></button>
+<button class="main-button" onclick="nhan();"><font size="4">x</font></button>
+<br/>
+<button type="reset" class="main-button" onclick="xoa();"><font size="4">C</font></button>
+<button class="main-button" onclick="so0();"><font size="4">0</font></button>
+<button class="main-button" onclick="bang();"><font size="4">=</font></button>
+<button  class="main-button" onclick="chia();"><font size="4">/</font></button>
+</div>
+<script>
+
+    function so1() {
+        nhapso.value += 1;
+    }
+    function so2() {
+        nhapso.value += 2;
+    }
+    function so3() {
+        nhapso.value += 3;
+    }
+    function so4() {
+        nhapso.value += 4;
+    }
+    function so5() {
+        nhapso.value += 5;
+    }
+    function so6() {
+        nhapso.value += 6;
+    }
+    function so7() {
+        nhapso.value += 7;
+    }
+    function so8() {
+        nhapso.value += 8;
+    }
+    function so9() {
+        nhapso.value += 9;
+    }
+    function so0() {
+        nhapso.value += 0;
+    }
+    function cong() {
+        nhapso.value += "+";
+    }
+    function tru() {
+        nhapso.value += "-";
+    }
+    function nhan() {
+        nhapso.value += "*";
+    }
+    function chia() {
+        nhapso.value += "/";
+    }
+    function bang() {
+        alert(eval(document.getElementById("nhapso").value));
+    }
+    function xoa() {
+        document.getElementById("nhapso").value=null;
+    }
+
+</script>
+</body>
+</html>

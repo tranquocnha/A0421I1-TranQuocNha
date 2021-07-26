@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây.</p>
+<p id="result"></p>
+<script>
+    let n = 4;
+    let m = 5;
+    let result ='';
+    let res = document.getElementById("result");
+    for(let i=0;i<=m;i++){
+        for(let j=0;j<=n;j++){
+            if(i==0||i==m){
+                result += "*";
+            }else{
+                if(j==0||j==n){
+                    result += "*";
+                }
+                else{
+                    result +="&nbsp&nbsp";
+                }
+            }
+        }
+        result += '<br/>'
+    }
+    res.innerHTML = result;
+</script>
+</body>
+</html>

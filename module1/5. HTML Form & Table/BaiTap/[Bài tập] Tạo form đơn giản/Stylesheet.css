@@ -1,0 +1,53 @@
+.container{
+    background-color: white;
+    border: 2px solid aquamarine;
+    width: 500px;
+}
+.center{
+    width: 500px;
+
+}
+.main-2{
+    width:400px;
+    top:30%;
+    color: #6aff41;
+    margin: auto;
+}
+.main-2 input{
+    margin: 10px;
+}
+.main-1{
+    background-color: orange;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
+.main-radio{
+    margin:auto;
+    width:400px;
+
+}
+
+.main-radio1{
+    color: orange;
+
+}
+.main-button{
+    text-align: center ;
+}
+
+.main-container{
+    display: flex;
+    margin-left: 50px;
+}
+
+.input-container{
+    border: 1px solid #333;
+}
+
+.main-radio{
+    width: 100%;
+}
+.title-hobby{
+    color: #6aff41;
+}

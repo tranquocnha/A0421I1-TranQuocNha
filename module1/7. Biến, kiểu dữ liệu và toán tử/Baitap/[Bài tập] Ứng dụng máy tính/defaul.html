@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+    <div>
+            <div>
+            <input type="text" name="" id="numbera">
+            <input type="text" name="" id="numberb">
+            </div>
+            <table>
+                <tr></tr>
+                      <Th><button name="" id="addtion" onclick="funciaddtion()">addtion(+)</button></Th>
+                      <Th> <button name="" id="subtraction" onclick="funcisubtraction()">subtraction(-)</button></Th>
+                      <Th><button name="" id="multiplication" onclick="funcimultiplication()">multiplication(X)</button></Th>
+                      <Th> <button name="" id="division" onclick="funcidivision()">division(/)</button></Th>
+                </tr>
+            </table>
+        <div>
+            <label for="total">Total: </label>
+            <input type="text" name="" id="total">
+        </div>
+    </div>
+    <script>
+
+        function funciaddtion() {
+            var a = document.getElementById('numbera').value;
+            var b = document.getElementById('numberb').value;
+            var sum =0;
+             sum= (parseInt(a) + parseInt(b));
+            document.getElementById('total').value = sum;
+        }
+        function funcisubtraction() {
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var sum =0;
+            sum= (parseInt(a)- parseInt(b));
+            document.getElementById('total').value = sum;
+        }
+        function funcimultiplication() {
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var sum =0;
+            sum= (parseInt(a)*parseInt(b));
+            document.getElementById('total').value = sum;
+        }
+        function funcidivision() {
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var sum =0;
+            if(b==0){
+                alert("vui long nhap khac 0")
+            }else{
+                sum= (parseInt(a) / parseInt(b));
+            document.getElementById('total').value = sum;
+            }
+        }
+    </script>
+</body>
+</html>

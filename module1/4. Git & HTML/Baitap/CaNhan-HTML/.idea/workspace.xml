@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3f31cc2-0ea6-424c-bf13-ffe7bde3c4c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../7. Biến, kiểu dữ liệu và toán tử/Baitap/[Bài tập] Biến, kiểu dữ liệu và toán tử/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../7. Biến, kiểu dữ liệu và toán tử/Baitap/[Bài tập] Biến, kiểu dữ liệu và toán tử/Defaul.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../7. Biến, kiểu dữ liệu và toán tử/Baitap/[Bài tập] Biến, kiểu dữ liệu và toán tử/bai3-dienthichhinhtron.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../7. Biến, kiểu dữ liệu và toán tử/ThucHanh/[Thực hành] Khai báo và sử dụng biến/Defaul.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../7. Biến, kiểu dữ liệu và toán tử/ThucHanh/[Thực hành] Sử dụng toán tử/Defaul.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../7. Biến, kiểu dữ liệu và toán tử/ThucHanh/[Thực hành] Sử dụng toán tử/JavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Defaul.html" beforeDir="false" afterPath="$PROJECT_DIR$/Defaul.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1s7IzQSjEumqsLpdjx1oxZkkn8H" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../7. Biến, kiểu dữ liệu và toán tử/Baitap/[Bài tập] Biến, kiểu dữ liệu và toán tử" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Anh.html">
+    <configuration name="Anh.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CaNhan-HTML/Anh.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Demo.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CaNhan-HTML/Demo.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Anh.html" />
+        <item itemvalue="JavaScript Debug.Demo.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3f31cc2-0ea6-424c-bf13-ffe7bde3c4c3" name="Default Changelist" comment="" />
+      <created>1620217462922</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620217462922</updated>
+      <workItem from="1620217465296" duration="1760000" />
+      <workItem from="1620221730314" duration="972000" />
+      <workItem from="1620468291624" duration="277000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="548" y="161" key="FileChooserDialogImpl" timestamp="1620468568755">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="548" y="161" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1620468568755" />
+    <state width="1364" height="247" key="GridCell.Tab.0.bottom" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.0.center" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.0.left" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.0.right" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.1.bottom" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.1.center" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.1.left" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.1.right" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.2.bottom" timestamp="1620219237625">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620219237625" />
+    <state width="1364" height="247" key="GridCell.Tab.2.center" timestamp="1620219237625">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1620219237625" />
+    <state width="1364" height="247" key="GridCell.Tab.2.left" timestamp="1620219237624">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1620219237624" />
+    <state width="1364" height="247" key="GridCell.Tab.2.right" timestamp="1620219237625">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1620219237625" />
+    <state width="1364" height="247" key="GridCell.Tab.3.bottom" timestamp="1620219237625">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.3.bottom/0.0.1536.834@0.0.1536.834" timestamp="1620219237625" />
+    <state width="1364" height="247" key="GridCell.Tab.3.center" timestamp="1620219237625">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.3.center/0.0.1536.834@0.0.1536.834" timestamp="1620219237625" />
+    <state width="1364" height="247" key="GridCell.Tab.3.left" timestamp="1620219237625">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.3.left/0.0.1536.834@0.0.1536.834" timestamp="1620219237625" />
+    <state width="1364" height="247" key="GridCell.Tab.3.right" timestamp="1620219237625">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1364" height="247" key="GridCell.Tab.3.right/0.0.1536.834@0.0.1536.834" timestamp="1620219237625" />
+  </component>
+</project>

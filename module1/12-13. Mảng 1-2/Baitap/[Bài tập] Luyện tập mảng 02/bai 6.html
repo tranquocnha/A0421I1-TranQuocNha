@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</h2>
+<script>
+    var array= [];
+    do{
+        var n = (prompt("nhap vao bao nhieu gia tri trong mang"));
+    }while(n<0);
+    for(let i=0;i<n;i++){
+        array[i] = (prompt("Nhap vao gia tri mang thu ["+ (i)+"]"));
+        document.write("array["+i+"]="+array[i]+"<br/>")
+    }
+    for(let i=0;i<array.length;i++){
+        if(array[i]=="-"){
+            array[i]="_";
+        }
+    }
+    document.write(array);
+</script>
+</body>
+</html>

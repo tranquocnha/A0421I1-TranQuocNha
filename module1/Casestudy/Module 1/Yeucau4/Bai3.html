@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(s1,s2) {
+        let count =0;
+        s1 = s1.split('');
+        s2 = s2.split('');
+        s1.forEach((element)=>{
+            if(s2.includes(element)){
+                count++;
+                s2.slice(s2.indexOf(element),1);
+            }
+        });
+        return count;
+    }
+    let s1 = prompt("nhap mang 1");
+    let s2 = prompt("nhap mang 2");
+    console.log(commonCharacterCount(s1,s2));
+</script>
+</body>
+</html>
