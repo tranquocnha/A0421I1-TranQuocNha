@@ -1,13 +1,13 @@
 package b4.lop_va_doi_tuong_trong_Java.bai_tap.LopFan;
 
 public class Fan {
-    final int SLOW = 1;
-    final int FAST = 3;
     private int speed = SLOW;
     private boolean on = false;
     private double radius = 5;
     private String color = "Blue";
-
+    static final int SLOW = 1;
+    static final int FAST = 3;
+    static final int MEDIUM = 2;
     public void Fan(int speed, boolean on, double radius, String color) {
         this.speed = speed;
         this.on = on;
