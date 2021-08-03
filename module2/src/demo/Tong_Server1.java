@@ -10,7 +10,7 @@ public class Tong_Server1 {
     public static void main(String[] args)throws IOException {
         try (
                 ServerSocket server = new ServerSocket(900)) {
-            System.out.println(" Server1 da khoi dong...");
+            System.out.println(" Server0 da khoi dong...");
 
             //B2: Thuc hien lang nghe va ket noi
             try (
