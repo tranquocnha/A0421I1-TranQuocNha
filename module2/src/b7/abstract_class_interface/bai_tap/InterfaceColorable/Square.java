@@ -1,6 +1,7 @@
-package b6.ke_thua.thuc_hanh.DoiTuongHinhHoc;
+package b7.abstract_class_interface.bai_tap.InterfaceColorable;
 
-public class Square extends Rectangle {
+
+public class Square extends Rectangle implements Colorable {
     public Square() {
     }
 
@@ -17,26 +18,22 @@ public class Square extends Rectangle {
     }
 
     public void setSide(double side) {
-        super.setWidth(side);
-        super.setLength(side);
+        setWidth(side);
     }
 
     @Override
     public void setWidth(double width) {
         setSide(width);
     }
-
-
-    @Override
-    public void setLength(double length) {
-        setLength(length);
-    }
-
     @Override
     public String toString() {
         return "A Square with side="
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides");
     }
 }

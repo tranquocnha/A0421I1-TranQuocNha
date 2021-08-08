@@ -1,6 +1,6 @@
-package b6.ke_thua.thuc_hanh.DoiTuongHinhHoc;
+package b7.abstract_class_interface.bai_tap.InterfaceColorable;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Colorable {
     private double width = 1;
     private double length = 1;
 
@@ -40,6 +40,11 @@ public class Rectangle extends Shape {
 
     public double getPerimeter() {
         return 2 * (width + this.length);
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides");
     }
 
     @Override
