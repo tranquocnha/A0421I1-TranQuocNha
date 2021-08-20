@@ -1,7 +1,7 @@
 package b10.DSA_danh_sach.bai_tap.ArrayListMethod;
 
 public class MainMyList {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException {
         MyList<Integer> myList = new MyList<Integer>();
         myList.add(0, 1);
         myList.add(1, 2);

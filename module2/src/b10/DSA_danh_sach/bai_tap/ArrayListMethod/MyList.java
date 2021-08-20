@@ -1,6 +1,8 @@
 package b10.DSA_danh_sach.bai_tap.ArrayListMethod;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+
 
 public class MyList<E> {
     int size = 0;
@@ -15,23 +17,53 @@ public class MyList<E> {
         elements = new Object[capacity];
     }
 
-    private void ensureCapacity(int minCapacity) {
-        elements = Arrays.copyOf(elements, minCapacity);
-    }
-
-    public void add(int index, E element) {
-        size = elements.length;
-        ensureCapacity(size + 1);
-        if (index < size) {
-            for (int temp = size; index < temp; temp--) {
-                elements[temp] = elements[temp - 1];
-            }
-            elements[index] = element;
-            elements[size++] = element;
+    private void ensureCapacity(int minCapacity) throws IllegalAccessException {
+        if (minCapacity >= 0) {
+            elements = Arrays.copyOf(elements, minCapacity);
+        } else {
+             throw new IllegalAccessException("Mincapacity:" + minCapacity);
         }
     }
 
-    public E remove(int index) {
+    public void add(int index, E element) throws IllegalAccessException {
+        if (index >=size || index<0) {
+            throw new ArrayIndexOutOfBoundsException("Index "+ index + " don't corrent");
+        }
+        if(size== elements.length){
+            ensureCapacity(elements.length *2 );
+        }
+        for (int temp = size; index < temp; temp--) {
+            elements[temp] = elements[temp - 1];
+        }
+        elements[index] = element;
+        size++;
+
+    }
+
+    //    public void add(int index, E element) {
+//        size = elements.length;
+//
+//        if (index > elements.length) {
+//            try {
+//                throw new IllegalAccessException("index :" + index);
+//            } catch (IllegalAccessException e) {
+//                e.printStackTrace();
+//            }
+//        } else if (elements.length == size) {
+//            ensureCapacity(size);
+//        }
+//        if(elements[index]==null){
+//            elements[index] = element;
+//            size++;
+//        }else if (index < size) {
+//            for (int temp = size; index < temp; temp--) {
+//                elements[temp] = elements[temp - 1];
+//            }
+//            elements[index] = element;
+//            elements[size++] = element;
+//        }
+//    }
+    public E remove(int index) throws IllegalAccessException {
         for (int i = index; i < elements.length - 1; i++) {
             elements[i] = elements[i + 1];
         }
@@ -41,20 +73,23 @@ public class MyList<E> {
     }
 
     public int getSize() {
-        return elements.length;
+        return size;
     }
 
     public MyList<E> clone() {
-        return this;
+        MyList<E> newlist = new MyList<>(elements.length);
+        newlist.elements = Arrays.copyOf(elements,size);
+        newlist.size = size;
+        return newlist;
     }
 
-    public boolean contains(E o) {
+    public boolean contains(E element) {
         int sizeCurent = elements.length;
         if (sizeCurent == 0) {
             return false;
         } else {
             for (int i = 0; i < sizeCurent; i++) {
-                if (elements[i] == o) {
+                if (elements[i] == element) {
                     return true;
                 }
             }
@@ -64,13 +99,13 @@ public class MyList<E> {
     }
 
 
-    public int indexOf(E o) {
+    public int indexOf(E element) {
         int sizeCurent = elements.length;
         if (sizeCurent == 0) {
             return -1;
         } else {
             for (int i = 0; i < sizeCurent; i++) {
-                if (elements[i] == o) {
+                if (elements[i] == element) {
                     return i;
                 }
             }
@@ -78,18 +113,21 @@ public class MyList<E> {
         }
     }
 
-    public boolean add(E e) {
-        int sizeCurent = elements.length;
-        if (!contains(e)) {
-            ensureCapacity(sizeCurent + 1);
-            elements[sizeCurent++] = e;
+    public boolean add(E element) throws IllegalAccessException {
+
+        if (!contains(element)) {
+            ensureCapacity(elements.length+1);
+            elements[size++] = element;
             return true;
         }
         return false;
     }
 
-    public E get(int i) {
-        return (E) elements[i];
+    public E get(int index) {
+        if(index>=size ||index<0){
+            throw new ArrayIndexOutOfBoundsException("Index "+ index + " don't corrent");
+        }
+        return (E) elements[index];
     }
 
     public void clear() {

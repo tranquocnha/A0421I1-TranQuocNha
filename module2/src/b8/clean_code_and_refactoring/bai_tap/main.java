@@ -1,13 +1,6 @@
 package b8.clean_code_and_refactoring.bai_tap;
 
 public class main {
-    public static void main(String[] args) {
-        String player1Name = "nha";
-        String player2Name = "vuong";
-        int markScore1 = 4;
-        int markScore2 = 4;
-        System.out.println(getScore(player1Name,player2Name,markScore1,markScore2));
-    }
     public static String getScore(String player1Name, String player2Name, int m_score1, int m_score2) {
         String score = "";
         int tempScore=0;
@@ -43,25 +36,31 @@ public class main {
         }
         else
         {
-            for (int i=1; i<3; i++)
+            score = checkWin(m_score1, m_score2, score);
+        }
+        return score;
+    }
+
+    public static String checkWin(int m_score1, int m_score2, String score) {
+        int tempScore;
+        for (int i = 1; i<3; i++)
+        {
+            if (i==1) tempScore = m_score1;
+            else { score+="-"; tempScore = m_score2;}
+            switch(tempScore)
             {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
+                case 0:
+                    score+="Love";
+                    break;
+                case 1:
+                    score+="Fifteen";
+                    break;
+                case 2:
+                    score+="Thirty";
+                    break;
+                case 3:
+                    score+="Forty";
+                    break;
             }
         }
         return score;
