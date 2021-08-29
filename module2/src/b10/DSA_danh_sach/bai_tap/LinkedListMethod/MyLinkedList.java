@@ -1,8 +1,13 @@
 package b10.DSA_danh_sach.bai_tap.LinkedListMethod;
 
-public class MyLinkedList {
+public class MyLinkedList<E> {
     private Node head;
     private int numNodes = 1;
+
+    public MyLinkedList() {
+        numNodes = 0;
+        head = null;
+    }
 
     public MyLinkedList(Object data) {
         head = new Node(data);
@@ -22,6 +27,9 @@ public class MyLinkedList {
     }
 
     public void add(int index, Object data) {
+        if (index < 0 || index >= numNodes) {
+            throw new ArrayIndexOutOfBoundsException("Index " + index + " don't corrent");
+        }
         Node temp = head;
         Node holder;
         for (int i = 0; i < index - 1 && temp.next != null; i++) {
@@ -50,21 +58,38 @@ public class MyLinkedList {
     }
 
     public void remove(int index) {
+        if (index < 0 || index >= numNodes) {
+            throw new ArrayIndexOutOfBoundsException("Index " + index + " don't corrent");
+        }
         Node temp = head;
-        for (int i = 0; i < index && temp.next != null; i++) {
+        for (int i = 0; i < index - 1 && temp.next != null; i++) {
             temp = temp.next;
         }
         temp.next = temp.next.next;
         numNodes--;
     }
 
-    public boolean removeElement(Object e) {
+    public E removes(int index) {
+        if (index < 0 || index >= numNodes) {
+            throw new ArrayIndexOutOfBoundsException("Index " + index + " don't corrent");
+        }
+
+        Node temp = head;
+        for (int i = 0; i < index - 1 && temp.next != null; i++) {
+            temp = temp.next;
+        }
+        E element = (E) temp.next.data;
+        temp.next = temp.next.next;
+        numNodes--;
+        return element;
+    }
+
+    public boolean removeElement(Object element) {
         Node temp = head;
         int index = 0;
         while (temp.next != null) {
-            if (temp.data != e) {
+            if (temp.data != element) {
                 temp = temp.next;
-
             } else {
                 remove(index - 1);
                 return true;
