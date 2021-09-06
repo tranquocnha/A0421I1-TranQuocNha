@@ -11,7 +11,7 @@ public class ProductManager {
 
 
     public void add() {
-        int id = (listProduct.size() > 0) ? (listProduct.size() + 1) : 1;
+        int id = (listProduct.size() > 0) ? (listProduct.get(listProduct.size()-1).getId()+1) : 1;
         System.out.println("product id = " + id);
         String inputNameProduct = inputName();
         String inputBrand = inputBrand();
@@ -53,7 +53,12 @@ public class ProductManager {
             }
         }
         if (product != null) {
+            System.out.println("\nBạn có chắc muốn xóa không" + product.getNameProduct()+"\n Co" + "\n Không");
+            if(scanner.nextLine().equals("Co")){
             listProduct.remove(product);
+            }else{
+                show();
+            }
         } else {
             System.out.printf("id = %d not existed.\n", id);
         }
