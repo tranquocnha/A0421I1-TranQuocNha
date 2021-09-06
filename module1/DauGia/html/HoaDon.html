@@ -1,111 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../css/HoaDon.css">
+    <link rel="stylesheet" href="doan.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="container__title">
-        <h2>Để nhận sản phẩm đã thắng vui lòng chuyển khoản {Tổng Tiền} tới</h2>
-        <h2>Asia Commercial Bank số tài khoản: 244972449</h2>
-        <p>Để được xử lý đơn hàng nhanh nhất vui lòng điển số hóa đơn hoặc tài khoản trong mục "reference" khi chuyển khoản</p>
-    </div>
-    <div class="container__logo">
-        <div class="container__logo-left">
-            <h4>Đơn hàng ORD3048908</h4>
-            <h4>: Đang chờ thanh toán</h4>
-            <p>Hạn thanh toán 04-07-2020</p>
-        </div>
-        <div class="container__logo-right">
-            <img src="../assets/logo.png" height="40" width="40" />
-        </div>
-    </div>
-    <div class="form__info-list">
-        <ul>
-            <li>336 Trung Nu Vuong</li>
-            <li>Viet Nam</li>
-            <li>Da Nang</li>
-            <li>Hai Chau</li>
-            <li>552450</li>
-        </ul>
+<script>
+    class Product {
+        constructor(name, price, description) {
+            this.name = name;
+            this.price = price;
+            this.description = description;
+        }
+    }
+    let abc = [];
+    abc.push(new Product("Iphone", "100000000đ", "Iphone 11 pro max"));
+    abc.push(new Product("Iphone", "100000000đ", "Iphone 12 pro max"));
+    abc.push(new Product("Iphone", "100000000đ", "Iphone 13 pro max"));
+    function displayProduct() {
+        document.body.innerHTML = "";
+        let result = "<button onclick='hienthiformsanpham()' style='position:relative;top:50%;background:#333; color:white; padding: 5px 10px; outline:none; font-size:18px; border-radius:4px;cursor:pointer; margin: 10px 30px' >Create Product</button>"
+        result += "<table border='1' class='table__container'>";
+        for (let i = 0; i < abc.length; i++) {
+            result += "<tr>";
+            result += "<td style='padding:5px 10px'> " +
+                abc[i].name +
+                "</td>";
+            result += "<td style='padding:5px 10px'>" +
+                abc[i].price +
+                "</td>";
+            result += "<td style='padding:5px 10px'>" +
+                abc[i].description +
+                "</td>";
+            result += "<td style='padding:5px 10px'><button style='background:#333;cursor:pointer; outline:#333;color:white;padding: 5px 10px' onclick='hienthisuasanpham(" + i + ")'>Edit</button></td>";
+            result += "<td style='padding:5px 10px'><button style='background:red;cursor:pointer; outline:red;color:white;padding: 5px 10px' onclick='xoasanpham(" + i + ")'>Delete</button></td>";
+            result += "</tr>";
+        }
+        result += "</table>";
+        document.writeln(result);
+    }
+    function hienthiformsanpham() {
+        document.body.innerHTML = "";
+        let result = "Name: <input id='name'><br>"
+        result += "Price: <input id='price'><br>"
+        result += "Description: <input id='description'><br>"
+        result += "<button onclick='taoproduct()' >Create</button>"   // Nên sửa lại chú thích thành Sửa
+        document.writeln(result)
+    }
+    function taoproduct() {
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let description = document.getElementById("description").value;
+        abc.push(new Product(name, price, description));
+        displayProduct();
+    }
+    function hienthisuasanpham(index) {
+        document.body.innerHTML = "";
+        let result = "Name: <input id='name' value='" + abc[index].name + "'><br>"
+        result += "Price: <input id='price' value='" + abc[index].price + "'><br>"
+        result += "Description: <input id='description' value='" + abc[index].description + "'><br>"
+        result += "<button onclick='suasanpham(" + index + ")'>Create</button>"
+        document.writeln(result)
+    }
 
-        <ul>
-            <li>Room 303, East Ocean Centre</li>
-            <li>98 Granville Road</li>
-            <li>Tsimshatsui East, Kowloon</li>
-            <li>Hong Kong</li>
-        </ul>
-    </div>
-    <div class="btn__delivery">
-        <button><img src="#">ECONOMY DELIVERY</button>
-    </div>
-    <div class="form__pacakage">
-        <ul class="form__pacakage-title">
-            <li>Đơn Hàng</li>
-            <li>SHIPPING TYPE</li>
-            <li>PAYMENT TYPE</li>
-        </ul>
-
-        <ul class="form__pacakage-info">
-            <li>ORD30408908</li>
-            <li>ECONOMY DELIVERY</li>
-            <li>BANK WIRE</li>
-        </ul>
-    </div>
-    <div class="form__shipment">
-        <div class="form__shipment-title">
-            <h4>Shipment (#30408908): Receive 05 Apr to 12 Apr</h4>
-            <p>1</p>
-        </div>
-        <div class="form__shipment-table">
-            <table style="width: 100%">
-                <tr>
-                    <td>Sản Phẩm</td>
-                    <td>Số lượng</td>
-                    <td>Giá</td>
-                    <td>Thành tiền đơn vị</td>
-                </tr>
-                <tr>
-                    <td>Túi du lịch Neat xinh de xanh da trời</td>
-                    <td>1</td>
-                    <td>81000.00</td>
-                    <td>81000.00</td>
-                </tr>
-                <tr>
-                    <td>Phí dịch vụ 10%</td>
-                    <td></td>
-                    <td>8100.00</td>
-                    <td>8100.00</td>
-                </tr>
-                <tr>
-                    <td>Giao hàng</td>
-                    <td></td>
-                    <td>49000.00</td>
-                    <td>49000.00</td>
-                </tr>
-                <tr>
-                    <td><h5>Tổng</h5></td>
-                    <td><h5></h5></td>
-                    <Td><h5>138100.00</h5></Td>
-                    <Td><h5>VND 138100.00</h5></Td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div class="main__alert">
-        <div class="main__alert-form">
-        <img src="#">
-        <p>Nếu bạn không chuyển khoản số tiền chính xác, hoặc kết hợp nhiều đơn hàng, vui lòng gửi bản sao phiếu thanh toán
-        cùng số đơn hàng(ORD) tới
-        </p>
-        </div>
-        <div style="display: flex;justify-content: center;align-content: center"><img src="#"> Email: support.vn@doanCG.com | <img src="#"> Facebook </div>
-    </div>
-    <div class="form__pacakage">
-
-    </div>
-</div>
+    function suasanpham(index) {
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let description = document.getElementById("description").value;
+        abc[index + 1] = new Product(name, price, description);
+        displayProduct();
+    }
+    displayProduct();
+    function xoasanpham(index) {
+        abc.splice(index - 1, 1);
+        displayProduct();
+    }
+</script>
 </body>
 </html>
+
+
+<!--  Reword - Follow up
+
+     function editProduct(index) {
+            let name = document.getElementById("name").value;
+            let price = document.getElementById("price").value;
+            let description = document.getElementById("description").value;
+            arrayProduct[index] = new Product(name, price, description);
+            displayProduct();
+        }
+
+       function deleteProduct(index) {
+        if(confirm("Bạn có muốn xóa đối tượng ở vị trí "+index+" hay không?")) {
+            arrayProduct.splice(1,1);
+            displayProduct();
+        }
+    }
+
+     function showFormCreate() {
+        document.body.innerHTML="";
+        let result = "Name: <input id='name'><br>"
+        result+="Price: <input id='price'><br>"
+        result+="Description: <input id='description'><br>"
+        result+="<button onclick='createProduct()' >Create</button>"
+        document.writeln(result)
+    }
+    function createProduct() {
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let description = document.getElementById("description").value;
+        arrayProduct.push(new Product(name,price,description));
+        displayProduct();
+    }
+ -->
+doan.html
+6 KB
