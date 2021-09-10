@@ -1,4 +1,4 @@
-package caasestudy.controllers;
+package cassestudy.controllers;
 
 import java.util.Scanner;
 

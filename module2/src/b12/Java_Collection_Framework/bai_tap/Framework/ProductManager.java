@@ -53,11 +53,10 @@ public class ProductManager {
             }
         }
         if (product != null) {
-            System.out.println("\nBạn có chắc muốn xóa không" + product.getNameProduct()+"\n Co" + "\n Không");
-            if(scanner.nextLine().equals("Co")){
-            listProduct.remove(product);
-            }else{
-                show();
+            System.out.println("\nBạn có chắc muốn xóa không" + product.getNameProduct()+"\n co" + "\n Không");
+            if(scanner.nextLine().equals("co")){
+                listProduct.remove(product);
+                System.out.println("Xoa thanh cong");
             }
         } else {
             System.out.printf("id = %d not existed.\n", id);
