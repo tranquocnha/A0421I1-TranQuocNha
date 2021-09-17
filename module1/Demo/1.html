@@ -2,19 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Simple Captcha | Rhythm Shahriar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Simple captcha system to easily integrate in a form, all you need to copy and paste the script into your project.">
+    <meta name="keywords" content="rhythm shahriar, captcha, security, verification">
+    <meta name="author" content="Rhythm Shahriar">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+
+    <!-- simple captcha style -->
+    <link rel="stylesheet" href="captcha.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<script>
-    let x = 5;
+<section id="captcha">
 
-    do{
+    <div class="title">
+        <h2>Simple Captcha by <a href="http://rhythmshahriar.com">Rhythm Shahriar</a></h2>
+    </div><!-- ./title -->
 
-        console.log("CodeGy");
+    <!-- default form layout -->
+    <form class="captcha-from">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" maxlength="25"  class="form-control" id="firstName" onkeypress="return isAlpha(event);" required autocomplete="off" placeholder="First name ...">
+        </div>
 
-        x--;
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" maxlength="25"  class="form-control" id="lastName" onkeypress="return isAlpha(event);"  required autocomplete="off" placeholder="Last name ...">
+        </div>
 
-    } while(x == 5);
-</script>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" maxlength="50"  class="form-control" id="email" required autocomplete="off" placeholder="Email address ...">
+            <span id="errEmail"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <div class="input-group">
+                <span class="input-group-addon">+88</span>
+                <input type="text" maxlength="13" class="form-control" id="phone" onkeypress="return isNumber(event);" required autocomplete="off"  placeholder="01xxxxxx ...">
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" maxlength="25" class="form-control" id="pwd" required autocomplete="off" placeholder="Enter password ...">
+        </div>
+
+        <div class="form-group">
+            <label for="cpwd">Confirm Password:</label>
+            <input type="password" maxlength="25"  minlength="5"  class="form-control" id="cpwd" required autocomplete="off"  placeholder="Re-enter password ...">
+            <span id="errPwd"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Captcha:</label>
+
+            <!-- input captcha -->
+            <div class="captcha-code">
+                <div class="code">
+                    <div class="dynamic-code"></div>
+                </div>
+                <div class="captcha-reload">
+                    <i class="ion-ios-loop-strong"></i>
+                </div>
+            </div>
+            <div class="captcha-input">
+                <input type="text" class="form-control" id="captcha-input"  required autocomplete="off"  placeholder="Enter captcha code ...">
+                <span id="errCaptcha"></span>
+            </div>
+
+        </div>
+
+
+        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+    </form>
+
+    <center></center>
+
+</section><!-- #/main -->
+
+<!-- advanced captcha script -->
+<script src="captcha.js"></script>
 </body>
 </html>

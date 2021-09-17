@@ -30,6 +30,8 @@ public class Main {
         Country country6 = new Country(6, "CN", "China");
         Country country7 = new Country(7, "JP", "Japan");
         Country country8 = new Country(8, "TL", "Thailand");
+        Country country9 = new Country(9, "TL", "Thailand");
+
 
 
         List<Country> countries = new ArrayList<>();
@@ -41,7 +43,7 @@ public class Main {
         countries.add(country6);
         countries.add(country7);
         countries.add(country8);
-
+        countries.add(country9);
         FileWriter fileWriter = null;
 
         try {

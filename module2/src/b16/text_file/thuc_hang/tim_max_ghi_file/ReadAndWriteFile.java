@@ -28,7 +28,7 @@ public class ReadAndWriteFile {
         try {
             FileWriter writer = new FileWriter(filePath, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
-//            bufferedWriter.write("gia tri lon nhat la: "+max);
+            bufferedWriter.write("gia tri lon nhat la: "+max);
             System.out.println("so lon nhat: " + max);
             bufferedWriter.close();
         } catch (Exception e) {
