@@ -22,6 +22,13 @@ public abstract  class Facility implements Serializable {
         this.rentType = rentType;
     }
 
+    public Facility(String serviceId, double usableArea, float rentCost, int maxCustomer) {
+        this.serviceId = serviceId;
+        this.usableArea = usableArea;
+        this.rentCost = rentCost;
+        this.maxCustomer = maxCustomer;
+    }
+
     public String getServiceId() {
         return serviceId;
     }
@@ -29,6 +36,7 @@ public abstract  class Facility implements Serializable {
     public void setServiceId(String serviceId) {
         this.serviceId = serviceId;
     }
+
 
     public String getServiceName() {
         return serviceName;

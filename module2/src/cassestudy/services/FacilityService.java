@@ -7,4 +7,5 @@ public interface FacilityService {
     public void addNewHouse();
     public void addNewRoom();
 
+
 }

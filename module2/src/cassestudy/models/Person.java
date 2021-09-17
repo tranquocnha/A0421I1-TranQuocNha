@@ -3,7 +3,7 @@ package cassestudy.models;
 import java.io.Serializable;
 
 public abstract class Person implements Serializable {
-    private int id;
+    private String id;
     private String name;
     private int age;
     private String address;
@@ -14,7 +14,7 @@ public abstract class Person implements Serializable {
     public Person() {
     }
 
-    public Person(int id, String name, int age, String address, String gender, int phoneNumber, String email) {
+    public Person(String id, String name, int age, String address, String gender, int phoneNumber, String email) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -24,11 +24,11 @@ public abstract class Person implements Serializable {
         this.email = email;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -78,5 +78,18 @@ public abstract class Person implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                ", gender='" + gender + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

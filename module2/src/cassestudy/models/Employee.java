@@ -1,39 +1,30 @@
 package cassestudy.models;
 
 public class Employee extends Person {
-    private String level;
     private String position;
     private int salary;
 
     public Employee() {
     }
-    public Employee(String level, String position, int salary) {
-        this.level = level;
+    public Employee(String position, int salary) {
         this.position = position;
         this.salary = salary;
     }
 
-    public Employee(int id,
+    public Employee(String id,
                     String name,
                     int age,
                     String address,
                     String gender,
                     int phoneNumber,
                     String email,
-                    String level,
                     String position,
                     int salary) {
         super(id, name, age, address, gender, phoneNumber, email);
-        this.level = level;
         this.position = position;
         this.salary = salary;
     }
-    public String getLevel() {
-        return level;
-    }
-    public void setLevel(String level) {
-        this.level = level;
-    }
+
     public String getPosition() {
         return position;
     }
@@ -49,8 +40,14 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return  super.toString()+"Employee{" +
-                "level='" + level + '\'' +
+        return  "Employee{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", address='" + getAddress() + '\'' +
+                ", gender='" + getGender() + '\'' +
+                ", phoneNumber=" + getPhoneNumber() +
+                ", email='" + getEmail() + '\'' +
                 ", position='" + position + '\'' +
                 ", salary=" + salary +
                 '}';

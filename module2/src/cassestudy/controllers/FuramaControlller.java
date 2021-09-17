@@ -1,6 +1,6 @@
 package cassestudy.controllers;
 
-import cassestudy.services.Impl.EmployeeServiceImpl;
+import cassestudy.services.Impl.*;
 
 import java.util.Scanner;
 
@@ -67,13 +67,13 @@ public class FuramaControlller {
             }
             switch (choice) {
                 case 1:
-
+                    employeeService.display();
                     break;
                 case 2:
-
+                    employeeService.addNes();
                     break;
                 case 3:
-
+                    employeeService.edit();
                     break;
                 case 4:
                     displayMainMenu();
@@ -82,6 +82,7 @@ public class FuramaControlller {
         }
     }
     public static void menuCustomer(){
+        CustomerServiceImpl customerService = new CustomerServiceImpl();
         boolean check = true;
         while (check) {
             System.out.println("1. Display list customers");
@@ -92,13 +93,13 @@ public class FuramaControlller {
             Scanner scanner = new Scanner(System.in);
             switch (scanner.nextInt()) {
                 case 1:
-
+                    customerService.display();
                     break;
                 case 2:
-
+                    customerService.addNes();
                     break;
                 case 3:
-                    System.out.println("3");
+                    customerService.edit();
                     break;
                 case 4:
                     displayMainMenu();
@@ -107,6 +108,7 @@ public class FuramaControlller {
         }
     }
     public static void menuFacility(){
+        FacilityServiceImpl facilityService = new FacilityServiceImpl();
         boolean check = true;
         while (check) {
             System.out.println("1. Display list facility");
@@ -117,10 +119,13 @@ public class FuramaControlller {
             Scanner scanner = new Scanner(System.in);
             switch (scanner.nextInt()) {
                 case 1:
+                    facilityService.display();
                     break;
                 case 2:
+                    facilityService.addNewVilla();
                     break;
                 case 3:
+                    facilityService.displayMaintain();
                     break;
                 case 4:
                     displayMainMenu();
@@ -129,6 +134,8 @@ public class FuramaControlller {
         }
     }
     public static void menuBooking(){
+        BookingServiceImpl bookingService = new BookingServiceImpl();
+        ContractServiceImpl contractService = new ContractServiceImpl();
         boolean check = true;
         int choice=0;
         while (check) {
@@ -147,16 +154,21 @@ public class FuramaControlller {
             }
             switch (choice) {
                 case 1:
+                    bookingService.addBooking();
                     break;
                 case 2:
+                    bookingService.disPlayListBooking();
                     break;
                 case 3:
-
+                    contractService.addNewContracts();
                     break;
                 case 4:
+                    // chua lam
+                    contractService.displayListContracts();
                     break;
                 case 5:
-
+                    //chua lam
+                    contractService.editContracts();
                     break;
                 case 6:
                     displayMainMenu();
@@ -165,6 +177,7 @@ public class FuramaControlller {
         }
     }
     public static void menuPromotion(){
+        PromotionServiceImpl promotionService = new PromotionServiceImpl();
         boolean check=true;
         int choice=0;
         while (check) {
@@ -180,8 +193,10 @@ public class FuramaControlller {
             }
             switch (choice) {
                 case 1:
+                    promotionService.displayListCustomersUseService();
                     break;
                 case 2:
+                    promotionService.displayListCustomersGetVoucher();
                     break;
                 case 3:
                     displayMainMenu();

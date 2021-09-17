@@ -1,5 +1,7 @@
 package cassestudy.services;
 
+import cassestudy.models.Employee;
+
 public interface Service {
     public void display();
 

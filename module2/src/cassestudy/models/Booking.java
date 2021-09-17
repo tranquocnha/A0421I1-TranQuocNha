@@ -6,7 +6,7 @@ public class Booking implements Serializable {
     private int idBooking;
     private String arrivalDate;
     private String lastDay;
-    private int idCustomer;
+    private String idCustomer;
     private String nameService;
     private String typeService;
     private Customer customer;
@@ -15,7 +15,7 @@ public class Booking implements Serializable {
     public Booking() {
     }
 
-    public Booking(int idBooking, String arrivalDate, String lastDay, int idCustomer, String nameService, String typeService) {
+    public Booking(int idBooking, String arrivalDate, String lastDay, String idCustomer, String nameService, String typeService) {
         this.idBooking = idBooking;
         this.arrivalDate = arrivalDate;
         this.lastDay = lastDay;
@@ -24,13 +24,21 @@ public class Booking implements Serializable {
         this.typeService = typeService;
     }
 
-    public Booking(int idBooking, String arrivalDate, String lastDay, int idCustomer, String nameService, String typeService, Customer customer, Facility facility) {
+    public Booking(int idBooking, String arrivalDate, String lastDay, String idCustomer, String nameService, String typeService, Customer customer, Facility facility) {
         this.idBooking = idBooking;
         this.arrivalDate = arrivalDate;
         this.lastDay = lastDay;
         this.idCustomer = idCustomer;
         this.nameService = nameService;
         this.typeService = typeService;
+        this.customer = customer;
+        this.facility = facility;
+    }
+
+    public Booking(int idBooking, String arrivalDate, String lastDay, Customer customer, Facility facility) {
+        this.idBooking = idBooking;
+        this.arrivalDate = arrivalDate;
+        this.lastDay = lastDay;
         this.customer = customer;
         this.facility = facility;
     }
@@ -59,11 +67,11 @@ public class Booking implements Serializable {
         this.lastDay = lastDay;
     }
 
-    public int getIdCustomer() {
+    public String getIdCustomer() {
         return idCustomer;
     }
 
-    public void setIdCustomer(int idCustomer) {
+    public void setIdCustomer(String idCustomer) {
         this.idCustomer = idCustomer;
     }
 

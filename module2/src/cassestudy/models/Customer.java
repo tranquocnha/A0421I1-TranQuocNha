@@ -1,12 +1,18 @@
 package cassestudy.models;
 
 public class Customer extends Person {
+
     private String typeCustomer;
 
     public Customer() {
     }
 
-    public Customer(int id, String name, int age, String address, String gender, int phoneNumber, String email, String typeCustomer) {
+    public Customer(String id, String name, int age, String address, String gender, int phoneNumber, String email, String typeCustomer) {
+        super(id, name, age, address, gender, phoneNumber, email);
+        this.typeCustomer = typeCustomer;
+    }
+
+    public Customer(String id, String name, int age, String address, String gender, int phoneNumber, String email, String customerId, String typeCustomer) {
         super(id, name, age, address, gender, phoneNumber, email);
         this.typeCustomer = typeCustomer;
     }
@@ -19,9 +25,18 @@ public class Customer extends Person {
         this.typeCustomer = typeCustomer;
     }
 
+
+
     @Override
     public String toString() {
-        return  super.toString()+"Customer{" +
+        return  "Customer{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", address='" + getAddress() + '\'' +
+                ", gender='" + getGender() + '\'' +
+                ", phoneNumber=" + getPhoneNumber() +
+                ", email='" + getEmail() + '\'' +
                 "typeCustomer='" + typeCustomer + '\'' +
                 '}';
     }
