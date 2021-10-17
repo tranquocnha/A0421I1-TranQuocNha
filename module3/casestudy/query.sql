@@ -37,12 +37,12 @@ left join hop_dong_chi_tiet on hop_dong.id_hop_dong=hop_dong_chi_tiet.id_hop_don
 left join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem=dich_vu_di_kem.id_dich_vu_di_kem
 group by khach_hang.id_khach_hang;
 -- task 6
-select dich_vu.id_dich_vu,dich_vu.ten_dich_vu,dich_vu.dien_tich,dich_vu.chi_phi_thue,loai_dich_vu.ten_loai_dich_vu
+select dich_vu.id_dich_vu,dich_vu.ten_dich_vu,dich_vu.dien_tich,dich_vu.chi_phi_thue,loai_dich_vu.ten_loai_dich_vu,hop_dong.ngay_lam_hop_dong
 from dich_vu
 join loai_dich_vu on dich_vu.id_loai_dich_vu=loai_dich_vu.id_loai_dich_vu
-join hop_dong on dich_vu.id_dich_vu=hop_dong.id_dich_vu
-where dich_vu.id_dich_vu not in (select hop_dong.id_dich_vu from hop_dong 
-where (year(ngay_lam_hop_dong)=2021) and (month(ngay_lam_hop_dong) in (01,02,03)));
+left join hop_dong on dich_vu.id_dich_vu=hop_dong.id_dich_vu
+where dich_vu.id_dich_vu in (select hop_dong.id_dich_vu from hop_dong ) 
+and not ((year(hop_dong.ngay_lam_hop_dong)=2020) and (month(hop_dong.ngay_lam_hop_dong) in (01,02,03)));
 -- task 7
 select dich_vu.id_dich_vu,dich_vu.ten_dich_vu,dich_vu.dien_tich,dich_vu.so_nguoi_toi_da,dich_vu.chi_phi_thue,loai_dich_vu.ten_loai_dich_vu
 from dich_vu
@@ -127,14 +127,10 @@ where id_nhan_vien not in (select id_nhan_vien from hop_dong where year(ngay_lam
 update khach_hang
 set id_loai_khach=1
 where id_loai_khach=2 and id_khach_hang in (select id_khach_hang from hop_dong where hop_dong.tong_tien >=10000000 );
-
-
 -- task 18
-
 delete from khach_hang
 where id_khach_hang in (select id_khach_hang from hop_dong where year(ngay_lam_hop_dong)<2016);
 -- task 19
-
 update dich_vu_di_kem
 set gia=gia*2
 where id_dich_vu_di_kem 
@@ -159,12 +155,11 @@ in (select id_nhan_vien
 from hop_dong
  where ngay_lam_hop_dong='2019-12-12' 
  group by id_nhan_vien ));
- 
- 
  -- task 22
 SET SQL_SAFE_UPDATES = 0;
 update v_nhan_vien
 set  dia_chi='Liên Chiểu';
+-- task 23
  
  
  
