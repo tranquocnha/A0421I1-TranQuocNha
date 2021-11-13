@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="PTB2_jar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../PTB2/out/artifacts/PTB2_jar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../PTB2/out/artifacts/PTB2_jar" recursive="false" />
+  </library>
+</component>

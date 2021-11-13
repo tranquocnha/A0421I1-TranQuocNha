@@ -22,7 +22,7 @@
         <a href="/list?action=sort">Sort Users By Name</a>
     </h2>
     <form method="get">
-        <input name="action" type="hidden" value="find">
+        <input name="action" type="text" value="find">
         <label id="find">Find User by CounTry<input name="country" type="text"></label>
         <input type="submit" value="Find User">
     </form>
