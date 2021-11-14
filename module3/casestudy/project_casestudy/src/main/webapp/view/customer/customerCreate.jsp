@@ -55,11 +55,13 @@
                 </div>
                 <div class="form-group">
                     <label for="customer_id_card">Số CMND</label>
-                    <input type="text" class="form-control" id="customer_id_card" name="customer_id_card" required>
+                    <input type="text" class="form-control" id="customer_id_card" name="customer_id_card" ${customerCreateList.customerIdCard} required>
+                    <span>${messMSSIdCart}</span>
                 </div>
                 <div class="form-group">
                     <label for="customer_id_card">Số điện thoại</label>
-                    <input type="text" class="form-control" id="customer_phone" name="customer_phone" required>
+                    <input type="text" class="form-control" id="customer_phone" name="customer_phone" value="${customerCreateList.customerPhone}" required>
+                    <span>${messMSSPhone}</span>
                 </div>
                 <div class="form-group">
                     <label for="customer_email">Email</label>

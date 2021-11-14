@@ -180,6 +180,8 @@ public class CustomerServlet extends HttpServlet {
             }
         }else {
             request.setAttribute("messMSS",map.get("MSS"));
+            request.setAttribute("messMSSPhone",map.get("MSSPhone"));
+            request.setAttribute("messMSSIdCart",map.get("MSSIdCart"));
             request.setAttribute("customerCreateList",customer);
             request.setAttribute("customerTypeList",customerTypeService.findAll());
             try {

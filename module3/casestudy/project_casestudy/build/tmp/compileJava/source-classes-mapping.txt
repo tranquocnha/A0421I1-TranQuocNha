@@ -110,16 +110,16 @@ model/repository/Contract/ContractRepository.java
  model.repository.Contract.ContractRepository
 model/repository/Position/impl/PositionRepositoryImpl.java
  model.repository.Position.impl.PositionRepositoryImpl
+model/services/Service/impl/ServiceImpl.java
+ model.services.Service.impl.ServiceImpl
+model/services/Service/Service.java
+ model.services.Service.Service
 model/services/Customer/impl/CustomerServiceImpl.java
  model.services.Customer.impl.CustomerServiceImpl
 controller/ContractDetailServlet.java
  controller.ContractDetailServlet
 controller/ContractServlet.java
  controller.ContractServlet
-model/services/Service/Service.java
- model.services.Service.Service
-model/services/Service/impl/ServiceImpl.java
- model.services.Service.impl.ServiceImpl
 controller/ServiceServlet.java
  controller.ServiceServlet
 controller/CustomerServlet.java
