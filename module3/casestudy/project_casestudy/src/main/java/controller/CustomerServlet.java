@@ -2,17 +2,16 @@ package controller;
 
 
 import model.bean.Customer;
-import model.bean.CustomerType;
-import model.services.CustomerService;
-import model.services.CustomerTypeService;
-import model.services.impl.CustomerServiceImpl;
-import model.services.impl.CustomerTypeServiceImlp;
+import model.services.Customer.CustomerService;
+import model.services.CustomerType.CustomerTypeService;
+import model.services.Customer.impl.CustomerServiceImpl;
+import model.services.CustomerType.impl.CustomerTypeServiceImlp;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customer")
 public class CustomerServlet extends HttpServlet {
@@ -165,23 +164,31 @@ public class CustomerServlet extends HttpServlet {
         int customerTypeId = Integer.parseInt(request.getParameter("customer_type_id"));
         Customer customer = new Customer(customerCode,customerName,customerBirthday,customerGender,customerIdCard,
                 customerPhone,customerEmail,customerAddress,customerTypeId);
-        boolean check= customerService.saveCustomer(customer);
-        if (check){
-            request.setAttribute("mess", "Thêm thành công");
-        }else {
-            request.setAttribute("mess", "Thêm thất bại");
-        }
-        // về alij trang list có kèm theo dữ liệu
-
+        Map<String,String> map = customerService.saveCustomer1(customer);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/customerList.jsp");
-        request.setAttribute("customerList",customerService.findAll());
-        request.setAttribute("customerTypeList",customerTypeService.findAll());
-        try {
-            requestDispatcher.forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        RequestDispatcher requestDispatcher1 = request.getRequestDispatcher("view/customer/customerCreate.jsp");
+        if (map.isEmpty()){
+            try {
+                request.setAttribute("mess", "Thêm thành công");
+                request.setAttribute("customerList",customerService.findAll());
+                request.setAttribute("customerTypeList",customerTypeService.findAll());
+                requestDispatcher.forward(request,response);
+            } catch (ServletException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else {
+            request.setAttribute("messMSS",map.get("MSS"));
+            request.setAttribute("customerCreateList",customer);
+            request.setAttribute("customerTypeList",customerTypeService.findAll());
+            try {
+                requestDispatcher1.forward(request,response);
+            } catch (ServletException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -46,7 +46,7 @@
         </div>
         <div class="form-group">
           <label for="customer_birthday">Ngày sinh nhật</label>
-          <input type="text" class="form-control" id="customer_birthday" name="customer_birthday" value="${customerList.customerBirthday}" required>
+          <input type="date" class="form-control" id="customer_birthday" name="customer_birthday" value="${customerList.customerBirthday}" required>
         </div>
         <div class="form-group">
           <label for="customer_birthday">Giới tính</label>

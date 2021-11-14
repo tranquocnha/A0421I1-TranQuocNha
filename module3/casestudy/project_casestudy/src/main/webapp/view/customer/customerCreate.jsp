@@ -22,7 +22,8 @@
 
                 <div class="form-group">
                     <label for="customer_code">Mã khách hàng</label>
-                    <input type="text" class="form-control" id="customer_code" name="customer_code" required>
+                    <input type="text" class="form-control" id="customer_code" name="customer_code" value="${customerCreateList.customerCode}" required>
+                    <span style="color: red">${messMSS}</span>
                 </div>
 
                 <div class="form-group">
@@ -46,7 +47,7 @@
                 </div>
                 <div class="form-group">
                     <label for="customer_birthday">Ngày sinh nhật</label>
-                    <input type="text" class="form-control" id="customer_birthday" name="customer_birthday" required>
+                    <input type="date" class="form-control" id="customer_birthday" name="customer_birthday" required>
                 </div>
                 <div class="form-group">
                     <label for="customer_birthday">Giới tính</label>

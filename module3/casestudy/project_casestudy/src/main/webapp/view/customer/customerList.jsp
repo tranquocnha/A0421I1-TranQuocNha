@@ -19,6 +19,7 @@
   <label id="find">Find User by Name<input name="customer_name" type="text"></label>
   <input type="submit" value="Name Customer">
 </form>
+<a href="/contract?action=add">Thêm hợp đồng</a>
 <a href="service?action=add"> Thêm dịch vụ</a><br>
 <a href="customer?action=add"> Thêm khách hàng</a>
 <div class="container">

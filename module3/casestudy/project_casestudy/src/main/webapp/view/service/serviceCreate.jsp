@@ -22,7 +22,8 @@
 
                 <div class="form-group">
                     <label for="service_code">Mã dịch vụ</label>
-                    <input type="text" class="form-control" id="service_code" name="service_code" required>
+                    <input type="text" class="form-control" id="service_code" name="service_code" value="${serviceCreateList.serviceCode}" required>
+                    <span>${messMSS}</span>
                 </div>
 
                 <div class="form-group">

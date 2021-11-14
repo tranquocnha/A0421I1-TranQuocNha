@@ -15,6 +15,11 @@
 </head>
 <body>
 <a href="/employee?action=add">Thêm nhân viên</a>
+<form action="/employee" method="get">
+    <input name="action" type="hidden" value="find">
+    <label id="find">Find employee by Name<input name="employee_name" type="text"></label>
+    <input type="submit" value="Name Customer">
+</form>
 <div class="container">
     <c:if test="${mess!=null}">
     <strong style="color: red">${mess}</strong>
@@ -79,14 +84,14 @@
                     </c:forEach>
                 </td>
                 <td>${nhanvien.userName}</td>
-                <td>Xóa
-<%--                    <button type="button" class="btn btn-info">--%>
-<%--                        <a href="/customer?action=update&id=${khachhang.customerId}" class="text-white">Sửa</a>--%>
-<%--                    </button>--%>
-<%--                    <button type="button" class="btn btn-danger" onclick="setValueForm('${khachhang.customerId}')"--%>
-<%--                            data-toggle="modal" data-target="#modalDelete">--%>
-<%--                        Xoá--%>
-<%--                    </button>--%>
+                <td>
+                    <button type="button" class="btn btn-info">
+                        <a href="/employee?action=update&id=${nhanvien.employeeId}" class="text-white">Sửa</a>
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="setValueForm('${nhanvien.employeeId}','${nhanvien.userName}')"
+                            data-toggle="modal" data-target="#modalDelete">
+                        Xoá
+                    </button>
                 </td>
             </tr>
         </c:forEach>
@@ -105,6 +110,7 @@
                     </div>
                     <div class="modal-body">
                         <input name="idDelete" id="idDelete" hidden>
+                        <input name="userNameDelete" id="userNameDelete" hidden>
                         Bạn có chắc muốn xoá ?
                     </div>
                     <div class="modal-footer">
@@ -132,8 +138,9 @@
     })
 </script>
 <script>
-    function setValueForm(idDelete) {
+    function setValueForm(idDelete,userNameDelete) {
         document.getElementById("idDelete").value = idDelete;
+        document.getElementById("userNameDelete").value =userNameDelete;
     }
 </script>
 </body>

@@ -27,7 +27,7 @@
 
                 <div class="form-group">
                     <label for="employee_birthday">Ngày Sinh</label>
-                    <input type="text" class="form-control" id="employee_birthday" name="employee_birthday" required>
+                    <input type="date" class="form-control" id="employee_birthday" name="employee_birthday" required>
                 </div>
                 <div class="form-group">
                     <label for="employee_id_card">Số chứng minh</label>
