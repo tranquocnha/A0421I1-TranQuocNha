@@ -35,7 +35,23 @@ public class ContractServlet extends HttpServlet {
                 showCreateContract(request,response);
                 break;
             default:
+                showContractList(request,response);
                 break;
+        }
+    }
+
+    private void showContractList(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/contract/contractList.jsp");
+        request.setAttribute("contractList",contractService.findAll());
+        request.setAttribute("customerList",customerService.findAll());
+        request.setAttribute("employeeList",employeeService.findAll());
+        request.setAttribute("serviceList",service.findAll());
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

@@ -182,6 +182,8 @@ public class CustomerServlet extends HttpServlet {
             request.setAttribute("messMSS",map.get("MSS"));
             request.setAttribute("messMSSPhone",map.get("MSSPhone"));
             request.setAttribute("messMSSIdCart",map.get("MSSIdCart"));
+//            request.setAttribute("messMSSDay",map.get("MSSDay"));
+//            request.setAttribute("messMSSEmail",map.get("MSSEmail"));
             request.setAttribute("customerCreateList",customer);
             request.setAttribute("customerTypeList",customerTypeService.findAll());
             try {

@@ -20,7 +20,6 @@
   <input type="submit" value="Name Customer">
 </form>
 <a href="/contract?action=add">Thêm hợp đồng</a>
-<a href="service?action=add"> Thêm dịch vụ</a><br>
 <a href="customer?action=add"> Thêm khách hàng</a>
 <div class="container">
   <c:if test="${mess!=null}">

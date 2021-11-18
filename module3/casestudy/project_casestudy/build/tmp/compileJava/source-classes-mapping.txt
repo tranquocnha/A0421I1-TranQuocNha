@@ -46,10 +46,10 @@ controller/EmployeeServlet.java
  controller.EmployeeServlet
 model/repository/Division/impl/DivisionRepositoryImpl.java
  model.repository.Division.impl.DivisionRepositoryImpl
-model/services/ContractDetail/ContractDetailService.java
- model.services.ContractDetail.ContractDetailService
-model/services/Contract/ContractService.java
- model.services.Contract.ContractService
+model/repository/ContractDetail/impl/ContractDetailRepositoryImpl.java
+ model.repository.ContractDetail.impl.ContractDetailRepositoryImpl
+model/repository/ContractDetail/ContractDetailRepository.java
+ model.repository.ContractDetail.ContractDetailRepository
 model/repository/RentType/RentTypeRepository.java
  model.repository.RentType.RentTypeRepository
 model/repository/Division/DivisionRepository.java
@@ -58,12 +58,12 @@ model/repository/Employee/EmployeeRepository.java
  model.repository.Employee.EmployeeRepository
 model/repository/Service/ServiceRepositoryImpl.java
  model.repository.Service.ServiceRepositoryImpl
-model/services/Contract/impl/ContractServiceImpl.java
- model.services.Contract.impl.ContractServiceImpl
+model/services/ContractDetail/impl/ContractDetailServiceImpl.java
+ model.services.ContractDetail.impl.ContractDetailServiceImpl
 model/services/RentType/impl/RentTypeServiceImpl.java
  model.services.RentType.impl.RentTypeServiceImpl
-model/repository/ContractDetail/ContractDetailRepository.java
- model.repository.ContractDetail.ContractDetailRepository
+model/services/Contract/impl/ContractServiceImpl.java
+ model.services.Contract.impl.ContractServiceImpl
 model/repository/Employee/impl/EmployeeRepositoryImpl.java
  model.repository.Employee.impl.EmployeeRepositoryImpl
 model/services/CustomerType/CustomerTypeService.java
@@ -82,14 +82,14 @@ model/repository/EducationDegree/EducationDegreeRepository.java
  model.repository.EducationDegree.EducationDegreeRepository
 model/services/Position/impl/PositionServiceImpl.java
  model.services.Position.impl.PositionServiceImpl
-model/services/ContractDetail/impl/ContractDetailServiceImpl.java
- model.services.ContractDetail.impl.ContractDetailServiceImpl
-model/repository/ContractDetail/impl/ContractDetailRepositoryImpl.java
- model.repository.ContractDetail.impl.ContractDetailRepositoryImpl
+model/services/Contract/ContractService.java
+ model.services.Contract.ContractService
+model/repository/Contract/ContractRepository.java
+ model.repository.Contract.ContractRepository
 model/bean/ContractDetail.java
  model.bean.ContractDetail
-model/repository/Contract/impl/ContractRepositoryImpl.java
- model.repository.Contract.impl.ContractRepositoryImpl
+model/services/ContractDetail/ContractDetailService.java
+ model.services.ContractDetail.ContractDetailService
 model/repository/ServiceType/ServiceTypeRepositoryImpl.java
  model.repository.ServiceType.ServiceTypeRepositoryImpl
 model/services/Employee/impl/EmployeeServiceImpl.java
@@ -106,8 +106,8 @@ model/repository/EducationDegree/impl/EducationDegreeRepositoryImpl.java
  model.repository.EducationDegree.impl.EducationDegreeRepositoryImpl
 model/services/EducationDegree/impl/EducationDegreeServiceImpl.java
  model.services.EducationDegree.impl.EducationDegreeServiceImpl
-model/repository/Contract/ContractRepository.java
- model.repository.Contract.ContractRepository
+model/repository/Contract/impl/ContractRepositoryImpl.java
+ model.repository.Contract.impl.ContractRepositoryImpl
 model/repository/Position/impl/PositionRepositoryImpl.java
  model.repository.Position.impl.PositionRepositoryImpl
 model/services/Service/impl/ServiceImpl.java

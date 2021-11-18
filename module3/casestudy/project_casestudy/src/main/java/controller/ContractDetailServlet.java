@@ -30,7 +30,20 @@ public class ContractDetailServlet extends HttpServlet {
                 showCreateContractDetail(request,response);
                 break;
             default:
+                showContractDetailList(request,response);
                 break;
+        }
+    }
+
+    private void showContractDetailList(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/contractDetail/contractDetailList.jsp");
+        request.setAttribute("contractDetailList",contractDetailService.findAll());
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -72,9 +85,8 @@ public class ContractDetailServlet extends HttpServlet {
         }
         // về alij trang list có kèm theo dữ liệu
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/customerList.jsp");
-        request.setAttribute("customerList",customerService.findAll());
-        request.setAttribute("customerTypeList",customerTypeService.findAll());
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/contractDetail/contractDetailList.jsp");
+        request.setAttribute("contractDetailList",contractDetailService.findAll());
         try {
             requestDispatcher.forward(request,response);
         } catch (ServletException e) {

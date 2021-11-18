@@ -43,15 +43,16 @@
                 </div>
                 <div class="form-group">
                     <label for="customer_name">Tên khách hàng</label>
-                    <input type="text" class="form-control" id="customer_name" name="customer_name" required>
+                    <input type="text" class="form-control" id="customer_name" name="customer_name" value="${customerCreateList.customerName}" required>
                 </div>
                 <div class="form-group">
                     <label for="customer_birthday">Ngày sinh nhật</label>
-                    <input type="date" class="form-control" id="customer_birthday" name="customer_birthday" required>
+                    <input type="date" class="form-control" id="customer_birthday" name="customer_birthday" ${customerCreateList.customerBirthday} required>
+                    <span>${messMSSDay}</span>
                 </div>
                 <div class="form-group">
                     <label for="customer_birthday">Giới tính</label>
-                    <input type="text" class="form-control" id="customer_gender" name="customer_gender" required>
+                    <input type="text" class="form-control" id="customer_gender" name="customer_gender" value="${customerCreateList.customerGender}" required>
                 </div>
                 <div class="form-group">
                     <label for="customer_id_card">Số CMND</label>
@@ -65,11 +66,12 @@
                 </div>
                 <div class="form-group">
                     <label for="customer_email">Email</label>
-                    <input type="text" class="form-control" id="customer_email" name="customer_email" required>
+                    <input type="text" class="form-control" id="customer_email" name="customer_email" value="${customerCreateList.customerEmail}" required>
+                    <span>${messMSSEmail}</span>
                 </div>
                 <div class="form-group">
                     <label for="customer_address">Địa chỉ</label>
-                    <input type="text" class="form-control" id="customer_address" name="customer_address" required>
+                    <input type="text" class="form-control" id="customer_address" name="customer_address" value="${customerCreateList.customerAddress}" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Lưu</button>
                 <button type="button" class="btn btn-success">

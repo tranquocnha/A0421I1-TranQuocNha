@@ -35,7 +35,22 @@ public class ServiceServlet extends HttpServlet {
                 showCreateService(request,response);
                 break;
             default:
+                showServiceList(request,response);
                 break;
+        }
+    }
+
+    private void showServiceList(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/service/serviceList.jsp");
+        request.setAttribute("serviceList",service.findAll());
+        request.setAttribute("serviceTypeList",serviceType.findAll());
+        request.setAttribute("rentTypeList",rentTypeService.findAll());
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -83,13 +98,14 @@ public class ServiceServlet extends HttpServlet {
                 ,serviceMaxPeople,standardRoom,descriptionOtherConvenience,poolArea
                 ,numberOfFloors,serviceTypeId,rentTypeId);
         Map<String,String> map = service.saveService1(services);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/customerList.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/service/serviceList.jsp");
         RequestDispatcher requestDispatcher1 = request.getRequestDispatcher("view/service/serviceCreate.jsp");
         if (map.isEmpty()){
             try {
                 request.setAttribute("mess", "Thêm thành công");
-                request.setAttribute("customerList",customerService.findAll());
-                request.setAttribute("customerTypeList",customerTypeService.findAll());
+                request.setAttribute("serviceList",service.findAll());
+                request.setAttribute("serviceTypeList",serviceType.findAll());
+                request.setAttribute("rentTypeList",rentTypeService.findAll());
                 requestDispatcher.forward(request,response);
             } catch (ServletException e) {
                 e.printStackTrace();
@@ -99,7 +115,8 @@ public class ServiceServlet extends HttpServlet {
         }else {
             request.setAttribute("messMSS",map.get("MSS"));
             request.setAttribute("serviceCreateList",services);
-            request.setAttribute("customerTypeList",customerTypeService.findAll());
+            request.setAttribute("serviceTypeList",serviceType.findAll());
+            request.setAttribute("rentTypeList",rentTypeService.findAll());
             try {
                 requestDispatcher1.forward(request,response);
             } catch (ServletException e) {
