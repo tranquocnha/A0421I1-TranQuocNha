@@ -30,8 +30,8 @@ model/repository/DBconnection.java
  model.repository.DBconnection
 model/services/EducationDegree/EducationDegreeService.java
  model.services.EducationDegree.EducationDegreeService
-model/services/Customer/CustomerService.java
- model.services.Customer.CustomerService
+model/services/Service/impl/ServiceImpl.java
+ model.services.Service.impl.ServiceImpl
 model/services/ServiceType/impl/ServiceTypeImpl.java
  model.services.ServiceType.impl.ServiceTypeImpl
 model/repository/Service/ServiceRepository.java
@@ -72,10 +72,10 @@ model/services/Division/impl/DivisionServiceImpl.java
  model.services.Division.impl.DivisionServiceImpl
 model/repository/CustomerType/impl/CustomerTypeRepositoryImpl.java
  model.repository.CustomerType.impl.CustomerTypeRepositoryImpl
-model/repository/Customer/CustomerRepository.java
- model.repository.Customer.CustomerRepository
-model/repository/Customer/impl/CustomerRepositoryImpl.java
- model.repository.Customer.impl.CustomerRepositoryImpl
+model/repository/Position/impl/PositionRepositoryImpl.java
+ model.repository.Position.impl.PositionRepositoryImpl
+model/services/Service/Service.java
+ model.services.Service.Service
 model/services/RentType/RentTypeService.java
  model.services.RentType.RentTypeService
 model/repository/EducationDegree/EducationDegreeRepository.java
@@ -108,12 +108,12 @@ model/services/EducationDegree/impl/EducationDegreeServiceImpl.java
  model.services.EducationDegree.impl.EducationDegreeServiceImpl
 model/repository/Contract/impl/ContractRepositoryImpl.java
  model.repository.Contract.impl.ContractRepositoryImpl
-model/repository/Position/impl/PositionRepositoryImpl.java
- model.repository.Position.impl.PositionRepositoryImpl
-model/services/Service/impl/ServiceImpl.java
- model.services.Service.impl.ServiceImpl
-model/services/Service/Service.java
- model.services.Service.Service
+model/services/Customer/CustomerService.java
+ model.services.Customer.CustomerService
+model/repository/Customer/impl/CustomerRepositoryImpl.java
+ model.repository.Customer.impl.CustomerRepositoryImpl
+model/repository/Customer/CustomerRepository.java
+ model.repository.Customer.CustomerRepository
 model/services/Customer/impl/CustomerServiceImpl.java
  model.services.Customer.impl.CustomerServiceImpl
 controller/ContractDetailServlet.java

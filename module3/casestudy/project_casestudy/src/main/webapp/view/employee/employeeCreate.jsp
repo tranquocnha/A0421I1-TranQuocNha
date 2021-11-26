@@ -19,12 +19,10 @@
         <div class="col-lg-12">
             <h3 class="text-center">Thêm Nhân Viên</h3>
             <form action="/employee?action=add" method="post">
-
                 <div class="form-group">
                     <label for="employee_name">Tên Nhân viên</label>
                     <input type="text" class="form-control" id="employee_name" name="employee_name" required>
                 </div>
-
                 <div class="form-group">
                     <label for="employee_birthday">Ngày Sinh</label>
                     <input type="date" class="form-control" id="employee_birthday" name="employee_birthday" required>

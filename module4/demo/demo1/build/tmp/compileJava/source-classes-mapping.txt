@@ -1,0 +1,8 @@
+codegym/config/AppConfiguration.java
+ codegym.config.AppConfiguration
+codegym/model/Student.java
+ codegym.model.Student
+codegym/config/AppInitializer.java
+ codegym.config.AppInitializer
+codegym/controller/HelloController.java
+ codegym.controller.HelloController

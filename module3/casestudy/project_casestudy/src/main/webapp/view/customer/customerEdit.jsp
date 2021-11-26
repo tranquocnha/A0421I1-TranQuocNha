@@ -24,7 +24,6 @@
           <label for="customer_code">Mã khách hàng</label>
           <input type="text" class="form-control" id="customer_code" name="customer_code" value="${customerList.customerCode}" required>
         </div>
-
         <div class="form-group">
           <label for="customer_type_id">Loại khách hàng</label>
           <select class="form-control" id="customer_type_id" name="customer_type_id" required>

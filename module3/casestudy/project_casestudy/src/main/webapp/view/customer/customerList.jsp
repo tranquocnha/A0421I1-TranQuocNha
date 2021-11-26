@@ -16,7 +16,10 @@
 <body>
 <form action="/customer" method="get">
   <input name="action" type="hidden" value="find">
-  <label id="find">Find User by Name<input name="customer_name" type="text"></label>
+  <label>Find User by Name<input name="customer_name" type="text"></label>
+  <label>Find User by Gender<input name="customer_gender" type="text"></label>
+  <label>Find User by Address<input name="customer_address" type="text"></label>
+  <label>Find User by Address<input name="customer_email" type="text"></label>
   <input type="submit" value="Name Customer">
 </form>
 <a href="/contract?action=add">Thêm hợp đồng</a>
@@ -29,16 +32,12 @@
     <thead>
       <tr>
         <th scope="col">STT</th>
-        <th scope="col">Mã khách hàng</th>
-        <th scope="col">Loại khách hàng</th>
-        <th scope="col">Tên khách hàng</th>
-        <th scope="col">Ngày Sinh</th>
-        <th scope="col">Giới tính</th>
-        <th scope="col">Số chứng minh</th>
-        <th scope="col">Số điện thoại</th>
-        <th scope="col">Email</th>
-        <th scope="col">Địa chỉ</th>
-        <th scope="col">Tác Vụ</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Color</th>
+        <th scope="col">Category</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>

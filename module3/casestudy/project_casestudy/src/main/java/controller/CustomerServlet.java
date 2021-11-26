@@ -41,8 +41,11 @@ public class CustomerServlet extends HttpServlet {
 
     private void showFoundCustomer(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("customer_name");
+        String gender = request.getParameter("customer_gender");
+        String address = request.getParameter("customer_address");
+        String email = request.getParameter("customer_email");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer/customerList.jsp");
-        request.setAttribute("customerList",customerService.findByName(name));
+        request.setAttribute("customerList",customerService.findByNameAndGenderAndAddressAndEmail(name,gender,address,email));
         request.setAttribute("customerTypeList",customerTypeService.findAll());
         try {
             requestDispatcher.forward(request,response);
@@ -183,7 +186,7 @@ public class CustomerServlet extends HttpServlet {
             request.setAttribute("messMSSPhone",map.get("MSSPhone"));
             request.setAttribute("messMSSIdCart",map.get("MSSIdCart"));
 //            request.setAttribute("messMSSDay",map.get("MSSDay"));
-//            request.setAttribute("messMSSEmail",map.get("MSSEmail"));
+            request.setAttribute("messMSSEmail",map.get("MSSEmail"));
             request.setAttribute("customerCreateList",customer);
             request.setAttribute("customerTypeList",customerTypeService.findAll());
             try {

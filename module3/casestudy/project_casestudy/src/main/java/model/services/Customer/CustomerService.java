@@ -13,4 +13,8 @@ public interface CustomerService {
     boolean updateCustomer(int id,Customer customer);
     Customer findById(int id);
     List<Customer> findByName(String name);
+
+    List<Customer> findByNameAndGenderAndAddress(String name, String gender, String address);
+
+    List<Customer> findByNameAndGenderAndAddressAndEmail(String name, String gender, String address, String email);
 }

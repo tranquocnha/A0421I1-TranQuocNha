@@ -1,0 +1,24 @@
+model/repository/DBconnection.java
+ model.repository.DBconnection
+model/services/Category/impl/CategoryServiceImpl.java
+ model.services.Category.impl.CategoryServiceImpl
+model/services/Category/CategoryService.java
+ model.services.Category.CategoryService
+model/repository/Category/CategoryRepository.java
+ model.repository.Category.CategoryRepository
+model/repository/Category/impl/CategoryRepositoryImpl.java
+ model.repository.Category.impl.CategoryRepositoryImpl
+model/bean/Category.java
+ model.bean.Category
+model/bean/Product.java
+ model.bean.Product
+model/repository/ProductRepository.java
+ model.repository.ProductRepository
+model/services/ProductService.java
+ model.services.ProductService
+controller/ProductServlet.java
+ controller.ProductServlet
+model/services/impl/ProductServiceImpl.java
+ model.services.impl.ProductServiceImpl
+model/repository/impl/ProductRepositoryImpl.java
+ model.repository.impl.ProductRepositoryImpl
