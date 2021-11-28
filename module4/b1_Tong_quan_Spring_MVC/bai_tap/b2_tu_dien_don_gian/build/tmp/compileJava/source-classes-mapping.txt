@@ -1,0 +1,16 @@
+codegym/config/AppConfiguration.java
+ codegym.config.AppConfiguration
+codegym/repository/impl/DictionaryRepositoryImpl.java
+ codegym.repository.impl.DictionaryRepositoryImpl
+codegym/controller/DictionaryController.java
+ codegym.controller.DictionaryController
+codegym/model/Dictionary.java
+ codegym.model.Dictionary
+codegym/repository/DictionaryRepository.java
+ codegym.repository.DictionaryRepository
+codegym/services/DictionaryService.java
+ codegym.services.DictionaryService
+codegym/services/impl/DictionaryServiceImpl.java
+ codegym.services.impl.DictionaryServiceImpl
+codegym/config/AppInitializer.java
+ codegym.config.AppInitializer
