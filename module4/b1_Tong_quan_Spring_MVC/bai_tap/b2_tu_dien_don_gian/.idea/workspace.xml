@@ -5,17 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60323a14-ebac-4408-80db-cafb39c2459f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/b2_tu_dien_don_gian.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/model/Dictionary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/DictionaryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/impl/DictionaryRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/services/DictionaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/services/impl/DictionaryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/dictionary.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../b1_chuyen_doi_tien_te/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../b1_chuyen_doi_tien_te/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/bai_tap/b1_sandwich_mvc/src/main/java/codegym/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/bai_tap/b1_sandwich_mvc/src/main/java/codegym/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/bai_tap/b1_sandwich_mvc/src/main/java/codegym/controller/SandwichCondimentsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b1_validate_email_maven/b1_validate_email.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b2_validate_email_gradle/.idea/modules/b2_validate_email_gradle.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b2_validate_email_gradle/src/main/java/com/codegym/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b2_validate_email_gradle/src/main/java/com/codegym/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b2_validate_email_gradle/src/main/java/com/codegym/controller/EmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b2_validate_email_gradle/src/main/webapp/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b2_validate_email_gradle/src/main/webapp/views/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/.idea/modules/b3_view_time_ct_gradle.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/src/main/java/codegym/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/src/main/java/codegym/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b3_view_time_ct_gradle/src/main/java/codegym/controller/TimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b4_view_time_ct_maven/b4_view_time_ct_maven.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b4_view_time_ct_maven/src/main/java/com/codegym/controller/TimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b4_view_time_ct_maven/src/main/webapp/WEB-INF/configs/spring-config-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b2_string_controller/thuc_hanh/b4_view_time_ct_maven/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/codegym/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/DictionaryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../thuc_hanh/b2_quan_ly_danh_sach_khach_hang/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/b2_quan_ly_danh_sach_khach_hang/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,9 +71,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/codegym/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -178,6 +195,10 @@
       <option name="presentableId" value="Default" />
       <updated>1638081562906</updated>
       <workItem from="1638081565664" duration="1602000" />
+      <workItem from="1638083828836" duration="1375000" />
+      <workItem from="1638097360343" duration="1610000" />
+      <workItem from="1638099624681" duration="1423000" />
+      <workItem from="1638167965187" duration="734000" />
     </task>
     <servers />
   </component>
@@ -194,5 +215,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

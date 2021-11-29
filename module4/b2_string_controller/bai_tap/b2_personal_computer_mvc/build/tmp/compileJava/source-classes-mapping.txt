@@ -1,0 +1,10 @@
+codegym/config/AppConfiguration.java
+ codegym.config.AppConfiguration
+codegym/services/CalculatorService.java
+ codegym.services.CalculatorService
+codegym/services/CalculatorServiceImpl.java
+ codegym.services.CalculatorServiceImpl
+codegym/config/AppInitializer.java
+ codegym.config.AppInitializer
+codegym/controller/PersonalComputerController.java
+ codegym.controller.PersonalComputerController
