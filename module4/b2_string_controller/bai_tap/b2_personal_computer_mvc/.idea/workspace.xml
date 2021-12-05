@@ -5,49 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="318bb631-ee84-4486-8d7c-2cc0fb0a2650" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../b1_sandwich_mvc/.idea/modules/b1_sandwich_mvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../b1_sandwich_mvc/src/main/java/codegym/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../b1_sandwich_mvc/src/main/java/codegym/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../b1_sandwich_mvc/src/main/java/codegym/controller/SandwichCondimentsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/b2_personal_computer_mvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/b2_personal_computer_mvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/PersonalComputerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/services/CalculatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/services/CalculatorServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b1_validate_email_maven/b1_validate_email.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b2_validate_email_gradle/.idea/modules/b2_validate_email_gradle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b2_validate_email_gradle/src/main/java/com/codegym/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b2_validate_email_gradle/src/main/java/com/codegym/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b2_validate_email_gradle/src/main/java/com/codegym/controller/EmailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b2_validate_email_gradle/src/main/webapp/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b2_validate_email_gradle/src/main/webapp/views/success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/.idea/modules/b3_view_time_ct_gradle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/src/main/java/codegym/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/src/main/java/codegym/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b3_view_time_ct_gradle/src/main/java/codegym/controller/TimeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b4_view_time_ct_maven/b4_view_time_ct_maven.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b4_view_time_ct_maven/src/main/java/com/codegym/controller/TimeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b4_view_time_ct_maven/src/main/webapp/WEB-INF/configs/spring-config-mvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/b4_view_time_ct_maven/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b1_Tong_quan_Spring_MVC/bai_tap/b2_tu_dien_don_gian/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b1_Tong_quan_Spring_MVC/bai_tap/b2_tu_dien_don_gian/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b1_Tong_quan_Spring_MVC/bai_tap/b2_tu_dien_don_gian/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b1_Tong_quan_Spring_MVC/bai_tap/b2_tu_dien_don_gian/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b1_Tong_quan_Spring_MVC/bai_tap/b2_tu_dien_don_gian/src/main/java/codegym/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b1_Tong_quan_Spring_MVC/bai_tap/b2_tu_dien_don_gian/src/main/java/codegym/controller/DictionaryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form/src/main/java/codegym/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form/src/main/java/codegym/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form/src/main/java/codegym/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form/src/main/java/codegym/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form/src/main/webapp/views/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form/src/main/webapp/views/employee/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b2_login/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b2_login/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b2_login/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b2_login/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b2_login/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b2_login/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b2_login/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b2_login/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../b1_Tong_quan_Spring_MVC/thuc_hanh/b2_quan_ly_danh_sach_khach_hang/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b1_Tong_quan_Spring_MVC/thuc_hanh/b2_quan_ly_danh_sach_khach_hang/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/b5_admin_customer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/b5_admin_customer/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b3_views_&amp;_thymeleaf/bai_tap/b1_thymeleaf_admin_product/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b3_views_&amp;_thymeleaf/bai_tap/b1_thymeleaf_admin_product/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../b4_data_binding_&amp;_form/thuc_hanh/b1_data_binding_&amp;_form" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -306,6 +283,8 @@
       <workItem from="1638177780541" duration="1996000" />
       <workItem from="1638179990468" duration="1814000" />
       <workItem from="1638183571491" duration="2404000" />
+      <workItem from="1638199938169" duration="193000" />
+      <workItem from="1638200185818" duration="875000" />
     </task>
     <servers />
   </component>
