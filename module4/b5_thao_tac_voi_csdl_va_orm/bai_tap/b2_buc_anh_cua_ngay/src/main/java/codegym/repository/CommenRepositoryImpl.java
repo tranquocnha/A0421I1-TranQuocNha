@@ -4,6 +4,7 @@ import codegym.model.Commen;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
