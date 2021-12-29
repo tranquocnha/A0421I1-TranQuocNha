@@ -63,4 +63,12 @@ public class StudentRepository {
                 .getResultList();
         return students;
     }
+
+    public List<Student> findStudentBySubjectName(String subjectName) {
+        List<Student> students = entityManager.createQuery(
+                        "select s from Student s where s.subject.subjectName like :subjectName")
+                .setParameter("subjectName", "%" + subjectName + "%")
+                .getResultList();
+        return students;
+    }
 }
