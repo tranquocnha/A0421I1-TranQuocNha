@@ -4,13 +4,17 @@ import com.codegym.springbootA04.entity.Student;
 import com.codegym.springbootA04.entity.Subject;
 import com.codegym.springbootA04.repository.StudentRepository;
 import com.codegym.springbootA04.repository.SubjectRepository;
+import com.codegym.springbootA04.validate.StudentValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 
 @Controller
 @RequestMapping("/student")
@@ -35,10 +39,27 @@ public class StudentController {
     }
 
     @PostMapping("/create")
-    public String create(@ModelAttribute("student") Student student){
-        Subject subject = new Subject("V001", "Văn học 10", "Khánh", null, null);
-        student.setSubject(subject);
+    public String create(@Validated @ModelAttribute("student") Student student,
+                         BindingResult bindingResult, Model model){
+        StudentValidator studentValidator = new StudentValidator();
+        studentValidator.validate(student, bindingResult);
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("subjects", subjectRepository.findAll());
+            return "create";
+        }
         studentRepository.createStudent(student);
         return "redirect:/student/list";
+    }
+
+    @ExceptionHandler(FileNotFoundException.class)
+    public String handleError(FileNotFoundException e, Model model) {
+        model.addAttribute("error", e.getMessage());
+        return "studenterror";
+    }
+
+    @ExceptionHandler(SQLException.class)
+    public String handleError2(SQLException e, Model model) {
+        model.addAttribute("error", e.getMessage());
+        return "studenterror";
     }
 }

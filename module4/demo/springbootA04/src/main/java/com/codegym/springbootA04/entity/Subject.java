@@ -1,5 +1,7 @@
 package com.codegym.springbootA04.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -17,6 +19,7 @@ public class Subject {
     private String teacher;
 
     @OneToMany(mappedBy = "subject")
+    @JsonBackReference
     private List<Student> students;
 
     private String note;

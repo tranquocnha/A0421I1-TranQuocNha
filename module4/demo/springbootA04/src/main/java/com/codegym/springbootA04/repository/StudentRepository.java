@@ -23,6 +23,7 @@ public class StudentRepository {
     }
 
     public List<Student> getList() {
+        System.out.println("Get list student");
         return entityManager.createQuery("Select s from Student s").getResultList();
     }
 
