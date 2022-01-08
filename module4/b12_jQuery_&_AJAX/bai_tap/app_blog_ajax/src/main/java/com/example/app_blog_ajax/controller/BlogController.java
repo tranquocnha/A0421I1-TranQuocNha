@@ -81,7 +81,7 @@ public class BlogController {
             modelAndView.addObject("blog", blog.get());
             return modelAndView;
         } else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
+            ModelAndView modelAndView = new ModelAndView("");
             return modelAndView;
         }
     }
@@ -104,7 +104,7 @@ public class BlogController {
             modelAndView.addObject("blog", blog.get());
             return modelAndView;
         } else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
+            ModelAndView modelAndView = new ModelAndView("");
             return modelAndView;
         }
     }
@@ -119,7 +119,7 @@ public class BlogController {
             return modelAndView;
 
         } else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
+            ModelAndView modelAndView = new ModelAndView("");
             return modelAndView;
         }
     }
@@ -127,7 +127,7 @@ public class BlogController {
     @PostMapping("/delete-blog")
     public String deleteBlog(@ModelAttribute("blog") Blog blog) {
         blogService.remove(blog.getId());
-        return "redirect:blogs";
+        return "redirect:/blogs";
     }
 
 }
