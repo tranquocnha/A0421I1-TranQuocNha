@@ -17,6 +17,8 @@
           integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
 <body class="sb-nav-fixed">
+<nav th:replace="~{/Layout::_menuTop}"></nav>
+<div th:insert="~{/Layout::_leftMenu}"></div>
 <div id="layoutSidenav_content" style="margin-left: 250px;margin-top: 80px;">
     <main>
         <form method="post" action="/customer/update" th:object="${customer}" id="update"

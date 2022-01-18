@@ -6,6 +6,8 @@
     <title>Title</title>
 </head>
 <body>
+<nav th:replace="~{/Layout::_menuTop}"></nav>
+<div th:insert="~{/Layout::_leftMenu}"></div>
 <div id="layoutSidenav_content" style="margin-left: 250px;margin-top: 80px;margin-bottom: 50px;">
     <div class="alert alert-danger alert-dismissible" th:if="${msg}">
         <p th:if="${msg}" th:text="${msg}"></p>

@@ -2,8 +2,8 @@ use casestudy_module4;
 
 insert into `role`
 values
-(1,'CUSTOMER'),
-(2,'EMPLOYEE');
+(1,'ROLE_USER'),
+(2,'ROLE_ADMIN');
 
 insert into `user`
 values
