@@ -71,7 +71,6 @@ public class CustomerServiceImpl implements CustomerService {
             System.out.println("3. Loai khach hang: ");
             System.out.println("4.Tro lai");
             int choice = 1;
-
             while (choice != 0) {
                 try {
                     choice = Integer.parseInt(scanner.nextLine());
@@ -97,7 +96,6 @@ public class CustomerServiceImpl implements CustomerService {
                         customer.setTypeCustomer(typeCustomer);
                         display();
                         break;
-
                     case 4:
                         return;
                     default:

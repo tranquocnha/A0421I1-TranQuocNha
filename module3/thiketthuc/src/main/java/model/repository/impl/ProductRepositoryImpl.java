@@ -102,7 +102,6 @@ public class ProductRepositoryImpl implements ProductRepository {
         boolean check = false;
         try{
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_INTO_PRODUCT);
-
             preparedStatement.setString(1,product.getProductName());
             preparedStatement.setDouble(2,product.getProductPrice());
             preparedStatement.setInt(3, product.getProductQuantity());
