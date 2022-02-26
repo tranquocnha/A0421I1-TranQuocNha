@@ -1,0 +1,130 @@
+<div class="container col-10 ">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" id="inputEmail3" name="email" formControlName="email">
+        <div
+          *ngIf="!contactForm.controls.email?.valid && (contactForm.controls.email?.dirty
+    ||contactForm.controls.email?.touched)">
+          <!--        <p class="text-danger">First Name is not valid</p>-->
+          <div [hidden]="!contactForm.controls.email.errors.required">
+            <p class="text-danger">please input</p>
+          </div>
+          <div [hidden]="!contactForm.controls.email.errors.email">
+            <p class="text-danger">no fomat email</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="inputPassword3" name="password" formControlName="password">
+        <div
+          *ngIf="!contactForm.controls.password?.valid && (contactForm.controls.password?.dirty
+    ||contactForm.controls.password?.touched)">
+          <div [hidden]="!contactForm.controls.password.errors.required">
+            <p class="text-danger">please input</p>
+          </div>
+          <div [hidden]="!contactForm.controls.password.errors.minlength">
+            <p class="text-danger">no fomat password</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword13" class="col-sm-2 col-form-label">Confirm Password</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="inputPassword13" name="confirmPassword"
+               formControlName="confirmPassword">
+        <div
+          *ngIf="!contactForm.controls.confirmPassword?.valid && (contactForm.controls.confirmPassword?.dirty)">
+          <div [hidden]="!contactForm.controls.confirmPassword.errors.required">
+            <p class="text-danger">please input</p>
+          </div>
+        </div>
+        <span class="text-danger" *ngIf="contactForm.errors?.mismatch&&contactForm.controls.confirmPassword?.dirty">
+          Password doesn't match
+        </span>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputState" class="col-sm-2 col-form-label">Country</label>
+      <div class="col-sm-5">
+        <select id="inputState" class="form-select" name="country" formControlName="country">
+          <option value="VN" selected>Viet Nam</option>
+          <option value="China">China</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+        </select>
+        <div
+          *ngIf="!contactForm.controls.country?.valid && (contactForm.controls.country?.dirty
+    ||contactForm.controls.country?.touched)">
+          <div [hidden]="!contactForm.controls.country.errors.required">
+            <p class="text-danger">please choose</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword12" class="col-sm-2 col-form-label">Age</label>
+      <div class="col-sm-5">
+        <input type="number" class="form-control" id="inputPassword12" name="age" formControlName="age">
+        <div
+          *ngIf="!contactForm.controls.age?.valid && (contactForm.controls.age?.dirty
+    ||contactForm.controls.age?.touched)">
+          <div [hidden]="!contactForm.controls.age.errors.required">
+            <p class="text-danger">please input</p>
+          </div>
+          <div [hidden]="!contactForm.controls.age.errors.min">
+            <p class="text-danger">age > 18</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+      <div class="col-sm-5">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="Male" checked
+                 formControlName="gender">
+          <label class="form-check-label" for="gridRadios1">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="Female"
+                 formControlName="gender">
+          <label class="form-check-label" for="gridRadios2">
+            Female
+          </label>
+        </div>
+        <div
+          *ngIf="!contactForm.controls.gender?.valid && (contactForm.controls.gender?.dirty
+    ||contactForm.controls.gender?.touched)">
+          <div [hidden]="!contactForm.controls.gender.errors.required">
+            <p class="text-danger">please choose</p>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="row mb-3">
+      <label for="inputPassword2" class="col-sm-2 col-form-label">Phone</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="inputPassword2" name="phone" formControlName="phone">
+        <div
+          *ngIf="!contactForm.controls.phone?.valid && (contactForm.controls.phone?.dirty
+    ||contactForm.controls.phone?.touched)">
+          <div [hidden]="!contactForm.controls.phone.errors.required">
+            <p class="text-danger">please input</p>
+          </div>
+          <div [hidden]="!contactForm.controls.phone.errors.pattern">
+            <p class="text-danger">no fomat phone</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Sign in</button>
+  </form>
+</div>

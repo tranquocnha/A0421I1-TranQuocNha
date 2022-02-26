@@ -1,0 +1,38 @@
+<div class="container col-10 ">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" id="inputEmail3" name="email" formControlName="email">
+        <div
+          *ngIf="!loginForm.controls.email?.valid && (loginForm.controls.email?.dirty
+    ||loginForm.controls.email?.touched)" >
+          <!--        <p class="text-danger">First Name is not valid</p>-->
+          <div [hidden]="!loginForm.controls.email.errors.required">
+            <p class="text-danger">please input</p>
+          </div>
+          <div [hidden]="!loginForm.controls.email.errors.email">
+            <p class="text-danger">no fomat email</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="inputPassword3" name="password" formControlName="password">
+        <div
+          *ngIf="!loginForm.controls.password?.valid && (loginForm.controls.password?.dirty
+    ||loginForm.controls.password?.touched)" >
+          <div [hidden]="!loginForm.controls.password.errors.required">
+            <p class="text-danger">please input</p>
+          </div>
+          <div [hidden]="!loginForm.controls.password.errors.minlength">
+            <p class="text-danger">no fomat password</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+  </form>
+</div>
