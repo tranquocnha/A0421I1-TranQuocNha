@@ -1,0 +1,59 @@
+<h2 class="text-center">Customer List</h2>
+<!--<a [routerLink]="'/customer/create'">-->
+<!--  <button type="button" class="btn btn-warning ">Customer create</button>-->
+<!--</a>-->
+<!--<nav class="navbar">-->
+<!--  <input class="form-control" type="text" name="search" [(ngModel)]="filter">-->
+<!--</nav>-->
+<div class="col-12 ">
+  <p class=" float-left ">
+    <a [routerLink]="'/customer/create'">
+      <button type="button" class="btn btn-warning ">Customer create</button>
+    </a>
+  </p>
+  <form class="form-inline float-right  ">
+    <input class="form-control" type="text" name="search" [(ngModel)]="filter">
+    <!--    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">-->
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+<table class="table table-striped table-hover text-center">
+  <thead class="text-secondary">
+  <th>No</th>
+  <th>Id</th>
+  <th>Code Customer</th>
+  <th>Name</th>
+  <th>BirthDate</th>
+  <th>Gender</th>
+  <th>Card</th>
+  <th>Number phone</th>
+  <th>Email</th>
+  <th>Customer Type</th>
+  <th>Address</th>
+  <th colspan="2"></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of customer;index as i">
+    <td>{{i + 1}}</td>
+    <td>{{c.id}}</td>
+    <td>{{c.customerCode}}</td>
+    <td>{{c.nameCustomer}}</td>
+    <td>{{c.birthDate}}</td>
+    <td>
+      <span *ngIf="c.gender == 1">
+        Male
+      </span>
+      <span *ngIf="c.gender == 2">
+        Female
+      </span>
+    </td>
+    <td>{{c.idCard}}</td>
+    <td>{{c.numberPhone}}</td>
+    <td>{{c.email}}</td>
+    <td>{{c.customerType.customerTypeName}}</td>
+    <td>{{c.address}}</td>
+  </tr>
+  </tbody>
+</table>
+
+

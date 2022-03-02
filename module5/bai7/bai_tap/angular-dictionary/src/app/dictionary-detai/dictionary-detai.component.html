@@ -1,0 +1,9 @@
+<div *ngIf="word; else tmpl">
+  <h2>Key Word : {{word.word}}</h2>
+  <h4>Mean: {{word.mean}}</h4>
+  <a [routerLink]="''">back</a>
+</div>
+
+<ng-template #tmpl>
+  <h2>Nothing to word</h2>
+</ng-template>
